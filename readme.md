@@ -17,6 +17,6 @@ Make sure you have these before starting the codelab:
 -   [ARCore compatible device](https://developers.google.com/ar/discover/#supported_devices)  and USB cable
 -   Access to the internet to download dependencies while building the app
 
-Later on we'll copy some 3D assets for the codelab from the sample project on GitHub. You can  [download these sample assets for the project](https://github.com/googlecodelabs/sceneform-intro/raw/master/sampledata.zip). The zip file also includes the completed project for reference.
+Later on we'll copy some 3D assets for the codelab from the sample project on GitHub. You can  [download these sample assets for the project](https://github.com/kgediya/ArCore-Sceneform-Kotlin/raw/master/resources/sampledata.zip). The zip file also includes the completed project for reference.
 
 For more information about getting started, see the  [Sceneform documentation](https://developers.google.com/ar/develop/java/sceneform/).
