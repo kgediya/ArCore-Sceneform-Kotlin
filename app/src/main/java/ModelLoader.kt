@@ -36,6 +36,7 @@ null
                 null })
         return
     }
+
     companion object {
         private val TAG = "ModelLoader"
     }

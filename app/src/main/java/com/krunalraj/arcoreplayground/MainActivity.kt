@@ -20,6 +20,7 @@ import android.net.Uri
 import android.widget.ImageView
 import PointerDrawable
 import ModelLoader
+import android.widget.Toast
 import java.lang.ref.WeakReference
 import com.google.ar.sceneform.ux.TransformableNode
 import com.google.ar.sceneform.rendering.ModelRenderable
@@ -27,6 +28,7 @@ import com.google.ar.core.Anchor
 import com.google.ar.sceneform.AnchorNode
 
 import androidx.appcompat.app.AlertDialog
+import com.google.ar.sceneform.assets.RenderableSource
 
 
 class MainActivity : AppCompatActivity() {
@@ -139,7 +141,7 @@ class MainActivity : AppCompatActivity() {
         val house = ImageView(this)
         house.setImageResource(R.drawable.house_thumb)
         house.setContentDescription("house")
-        house.setOnClickListener({ view -> addObject(Uri.parse("House.sfb")) })
+        house.setOnClickListener({ view -> addObjectRemote(Uri.parse("House.sfb")) })
         gallery.addView(house)
 
         val igloo = ImageView(this)
@@ -149,7 +151,7 @@ class MainActivity : AppCompatActivity() {
         gallery.addView(igloo)
     }
     private fun addObject(model: Uri) {
-        val frame = fragment?.getArSceneView()?.arFrame
+        val frame = fragment?.arSceneView?.arFrame
         val pt = getScreenCenter()
         val hits: List<HitResult>
         if (frame != null) {
@@ -164,12 +166,44 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+    private fun addObjectRemote(model: Uri) {
+        val frame = fragment?.arSceneView?.arFrame
+        val pt = getScreenCenter()
+        val hits: List<HitResult>
+        if (frame != null) {
+            hits = frame.hitTest(pt.x.toFloat(), pt.y.toFloat())
+            for (hit in hits) {
+                val trackable = hit.trackable
+                if (trackable is Plane && trackable.isPoseInPolygon(hit.hitPose)) {
+                    placeObject(fragment,hit.createAnchor(), model)
+                    break
+
+                }
+            }
+        }
+    }
+    private fun placeObject(fragment: ArFragment?, anchor: Anchor, model: Uri) {
+        ModelRenderable.builder()
+            .setSource(fragment.context, RenderableSource.builder().setSource(
+                fragment.context,
+                model,
+                RenderableSource.SourceType.GLTF2).build())
+            .setRegistryId(model)
+            .build()
+            .thenAccept {
+                addNodeToScene(anchor, it)
+            }
+            .exceptionally {
+                Toast.makeText(this@MainActivity, "Could not fetch model from $model", Toast.LENGTH_SHORT).show()
+                return@exceptionally null
+            }
+    }
     fun addNodeToScene(anchor: Anchor, renderable: ModelRenderable) {
         val anchorNode = AnchorNode(anchor)
-        val node = TransformableNode(fragment?.getTransformationSystem())
+        val node = TransformableNode(fragment?.transformationSystem)
         node.renderable = renderable
         node.setParent(anchorNode)
-        fragment?.getArSceneView()?.scene?.addChild(anchorNode)
+        fragment?.arSceneView?.scene?.addChild(anchorNode)
         node.select()
     }
     fun onException(throwable: Throwable) {
