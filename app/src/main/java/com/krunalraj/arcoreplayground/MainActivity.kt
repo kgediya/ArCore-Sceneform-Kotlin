@@ -138,11 +138,11 @@ class MainActivity : AppCompatActivity() {
         cabin.setOnClickListener({ view -> addObject(Uri.parse("Cabin.sfb")) })
         gallery.addView(cabin)
 
-        val house = ImageView(this)
-        house.setImageResource(R.drawable.house_thumb)
-        house.setContentDescription("house")
-        house.setOnClickListener({ view -> addObjectRemote(Uri.parse("House.sfb")) })
-        gallery.addView(house)
+        val cat = ImageView(this)
+        cat.setImageResource(R.drawable.cat_thumb)
+        cat.setContentDescription("cat")
+        cat.setOnClickListener({ view -> addObjectRemote(Uri.parse("https://raw.githubusercontent.com/kgediya/ArCore-Sceneform-Kotlin/master/resources/Mesh_Cat.gltf")) })
+        gallery.addView(cat)
 
         val igloo = ImageView(this)
         igloo.setImageResource(R.drawable.igloo_thumb)
@@ -184,8 +184,9 @@ class MainActivity : AppCompatActivity() {
     }
     private fun placeObject(fragment: ArFragment?, anchor: Anchor, model: Uri) {
         ModelRenderable.builder()
-            .setSource(fragment.context, RenderableSource.builder().setSource(
-                fragment.context,
+            .setSource(
+                fragment?.context, RenderableSource.builder().setSource(
+                    fragment?.context,
                 model,
                 RenderableSource.SourceType.GLTF2).build())
             .setRegistryId(model)
