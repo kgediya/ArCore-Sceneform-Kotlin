@@ -1,0 +1,623 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Add the Sceneform ArFragment.md</title><style>@charset "UTF-8";@import 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-alpha2/katex.min.css';code{color:#c7254e;background-color:#f9f2f4;border-radius:4px}code,kbd{padding:2px 4px}kbd{color:#fff;background-color:#333;border-radius:3px;box-shadow:inset 0 -1px 0 rgba(0,0,0,.25)}kbd kbd{padding:0;font-size:100%;box-shadow:none}pre{display:block;margin:0 0 10px;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}table{background-color:transparent}th{text-align:left}.table{width:100%;max-width:100%;margin-bottom:20px}.table>thead>tr>th{padding:8px;line-height:1.4285714;border-top:1px solid #ddd}.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td{padding:8px;line-height:1.4285714;vertical-align:top;border-top:1px solid #ddd}.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}.table>caption+thead>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>th,.table>thead:first-child>tr:first-child>td{border-top:0}.table>tbody+tbody{border-top:2px solid #ddd}.table .table{background-color:#fff}.table-condensed>thead>tr>th,.table-condensed>thead>tr>td,.table-condensed>tbody>tr>th,.table-condensed>tbody>tr>td,.table-condensed>tfoot>tr>th,.table-condensed>tfoot>tr>td{padding:5px}.table-bordered,.table-bordered>thead>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>th,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>th,.table-bordered>tfoot>tr>td{border:1px solid #ddd}.table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px}.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}.table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th{background-color:#f5f5f5}table col[class*="col-"]{position:static;float:none;display:table-column}table td[class*="col-"],table th[class*="col-"]{position:static;float:none;display:table-cell}.table>thead>tr>td.active,.table>thead>tr>th.active,.table>thead>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr>td.active,.table>tbody>tr>th.active,.table>tbody>tr.active>td,.table>tbody>tr.active>th,.table>tfoot>tr>td.active,.table>tfoot>tr>th.active,.table>tfoot>tr.active>td,.table>tfoot>tr.active>th{background-color:#f5f5f5}.table-hover>tbody>tr>td.active:hover,.table-hover>tbody>tr>th.active:hover,.table-hover>tbody>tr.active:hover>td,.table-hover>tbody>tr:hover>.active,.table-hover>tbody>tr.active:hover>th{background-color:#e8e8e8}.table>thead>tr>td.success,.table>thead>tr>th.success,.table>thead>tr.success>td,.table>thead>tr.success>th,.table>tbody>tr>td.success,.table>tbody>tr>th.success,.table>tbody>tr.success>td,.table>tbody>tr.success>th,.table>tfoot>tr>td.success,.table>tfoot>tr>th.success,.table>tfoot>tr.success>td,.table>tfoot>tr.success>th{background-color:#dff0d8}.table-hover>tbody>tr>td.success:hover,.table-hover>tbody>tr>th.success:hover,.table-hover>tbody>tr.success:hover>td,.table-hover>tbody>tr:hover>.success,.table-hover>tbody>tr.success:hover>th{background-color:#d0e9c6}.table>thead>tr>td.info,.table>thead>tr>th.info,.table>thead>tr.info>td,.table>thead>tr.info>th,.table>tbody>tr>td.info,.table>tbody>tr>th.info,.table>tbody>tr.info>td,.table>tbody>tr.info>th,.table>tfoot>tr>td.info,.table>tfoot>tr>th.info,.table>tfoot>tr.info>td,.table>tfoot>tr.info>th{background-color:#d9edf7}.table-hover>tbody>tr>td.info:hover,.table-hover>tbody>tr>th.info:hover,.table-hover>tbody>tr.info:hover>td,.table-hover>tbody>tr:hover>.info,.table-hover>tbody>tr.info:hover>th{background-color:#c4e3f3}.table>thead>tr>td.warning,.table>thead>tr>th.warning,.table>thead>tr.warning>td,.table>thead>tr.warning>th,.table>tbody>tr>td.warning,.table>tbody>tr>th.warning,.table>tbody>tr.warning>td,.table>tbody>tr.warning>th,.table>tfoot>tr>td.warning,.table>tfoot>tr>th.warning,.table>tfoot>tr.warning>td,.table>tfoot>tr.warning>th{background-color:#fcf8e3}.table-hover>tbody>tr>td.warning:hover,.table-hover>tbody>tr>th.warning:hover,.table-hover>tbody>tr.warning:hover>td,.table-hover>tbody>tr:hover>.warning,.table-hover>tbody>tr.warning:hover>th{background-color:#faf2cc}.table>thead>tr>td.danger,.table>thead>tr>th.danger,.table>thead>tr.danger>td,.table>thead>tr.danger>th,.table>tbody>tr>td.danger,.table>tbody>tr>th.danger,.table>tbody>tr.danger>td,.table>tbody>tr.danger>th,.table>tfoot>tr>td.danger,.table>tfoot>tr>th.danger,.table>tfoot>tr.danger>td,.table>tfoot>tr.danger>th{background-color:#f2dede}.table-hover>tbody>tr>td.danger:hover,.table-hover>tbody>tr>th.danger:hover,.table-hover>tbody>tr.danger:hover>td,.table-hover>tbody>tr:hover>.danger,.table-hover>tbody>tr.danger:hover>th{background-color:#ebcccc}fieldset{border:0;min-width:0}legend{display:block;width:100%;margin-bottom:20px;font-size:21px;line-height:inherit;color:#333;border-bottom:1px solid #e5e5e5}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type="radio"],input[type="checkbox"]{margin:4px 0 0;margin-top:1px \9;line-height:normal}input[type="file"]{display:block}input[type="range"]{display:block;width:100%}select[multiple],select[size]{height:auto}input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}output{padding-top:7px}output,.form-control{display:block;font-size:14px;line-height:1.4285714;color:#555}.form-control{width:100%;height:34px;padding:6px 12px;background-color:#fff;background-image:none;border:1px solid #ccc;border-radius:4px;box-shadow:inset 0 1px 1px rgba(0,0,0,.075);transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}.form-control:focus{border-color:#66afe9;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.form-control::-moz-placeholder{color:#777;opacity:1}.form-control:-ms-input-placeholder{color:#777}.form-control::-webkit-input-placeholder{color:#777}.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{cursor:not-allowed;background-color:#eee;opacity:1}textarea.form-control{height:auto}input[type="date"],input[type="time"],input[type="datetime-local"],input[type="month"]{line-height:34px;line-height:1.4285714 \0}input[type="date"].input-sm,.form-horizontal .form-group-sm input.form-control[type="date"],.input-group-sm>input.form-control[type="date"],.input-group-sm>input.input-group-addon[type="date"],.input-group-sm>.input-group-btn>input.btn[type="date"],input[type="time"].input-sm,.form-horizontal .form-group-sm input.form-control[type="time"],.input-group-sm>input.form-control[type="time"],.input-group-sm>input.input-group-addon[type="time"],.input-group-sm>.input-group-btn>input.btn[type="time"],input[type="datetime-local"].input-sm,.form-horizontal .form-group-sm input.form-control[type="datetime-local"],.input-group-sm>input.form-control[type="datetime-local"],.input-group-sm>input.input-group-addon[type="datetime-local"],.input-group-sm>.input-group-btn>input.btn[type="datetime-local"],input[type="month"].input-sm,.form-horizontal .form-group-sm input.form-control[type="month"],.input-group-sm>input.form-control[type="month"],.input-group-sm>input.input-group-addon[type="month"],.input-group-sm>.input-group-btn>input.btn[type="month"]{line-height:30px}input[type="date"].input-lg,.form-horizontal .form-group-lg input.form-control[type="date"],.input-group-lg>input.form-control[type="date"],.input-group-lg>input.input-group-addon[type="date"],.input-group-lg>.input-group-btn>input.btn[type="date"],input[type="time"].input-lg,.form-horizontal .form-group-lg input.form-control[type="time"],.input-group-lg>input.form-control[type="time"],.input-group-lg>input.input-group-addon[type="time"],.input-group-lg>.input-group-btn>input.btn[type="time"],input[type="datetime-local"].input-lg,.form-horizontal .form-group-lg input.form-control[type="datetime-local"],.input-group-lg>input.form-control[type="datetime-local"],.input-group-lg>input.input-group-addon[type="datetime-local"],.input-group-lg>.input-group-btn>input.btn[type="datetime-local"],input[type="month"].input-lg,.form-horizontal .form-group-lg input.form-control[type="month"],.input-group-lg>input.form-control[type="month"],.input-group-lg>input.input-group-addon[type="month"],.input-group-lg>.input-group-btn>input.btn[type="month"]{line-height:46px}.form-group{margin-bottom:15px}.radio,.checkbox{position:relative;display:block;min-height:20px;margin-top:10px;margin-bottom:10px}.radio label,.checkbox label{padding-left:20px;margin-bottom:0;font-weight:400;cursor:pointer}.radio input[type="radio"],.radio-inline input[type="radio"],.checkbox input[type="checkbox"],.checkbox-inline input[type="checkbox"]{position:absolute;margin-left:-20px;margin-top:4px \9}.radio+.radio,.checkbox+.checkbox{margin-top:-5px}.radio-inline,.checkbox-inline{display:inline-block;padding-left:20px;margin-bottom:0;vertical-align:middle;font-weight:400;cursor:pointer}.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-top:0;margin-left:10px}input[type="radio"][disabled],input[type="radio"].disabled,fieldset[disabled] input[type="radio"],input[type="checkbox"][disabled],input[type="checkbox"].disabled,fieldset[disabled] input[type="checkbox"],.radio-inline.disabled,fieldset[disabled] .radio-inline,.checkbox-inline.disabled,fieldset[disabled] .checkbox-inline,.radio.disabled label,fieldset[disabled] .radio label,.checkbox.disabled label,fieldset[disabled] .checkbox label{cursor:not-allowed}.form-control-static{padding-top:7px;padding-bottom:7px;margin-bottom:0}.form-control-static.input-lg,.form-horizontal .form-group-lg .form-control-static.form-control,.input-group-lg>.form-control-static.form-control,.input-group-lg>.form-control-static.input-group-addon,.input-group-lg>.input-group-btn>.form-control-static.btn,.form-control-static.input-sm,.form-horizontal .form-group-sm .form-control-static.form-control,.input-group-sm>.form-control-static.form-control,.input-group-sm>.form-control-static.input-group-addon,.input-group-sm>.input-group-btn>.form-control-static.btn{padding-left:0;padding-right:0}.input-sm,.form-horizontal .form-group-sm .form-control,.input-group-sm>.form-control{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}.input-group-sm>.input-group-addon{height:30px;line-height:1.5}.input-group-sm>.input-group-btn>.btn{height:30px;padding:5px 10px;font-size:12px;line-height:1.5;border-radius:3px}select.input-sm,.form-horizontal .form-group-sm select.form-control,.input-group-sm>select.form-control,.input-group-sm>select.input-group-addon,.input-group-sm>.input-group-btn>select.btn{height:30px;line-height:30px}textarea.input-sm,.form-horizontal .form-group-sm textarea.form-control,.input-group-sm>textarea.form-control,.input-group-sm>textarea.input-group-addon,.input-group-sm>.input-group-btn>textarea.btn,select[multiple].input-sm,.form-horizontal .form-group-sm select.form-control[multiple],.input-group-sm>select.form-control[multiple],.input-group-sm>select.input-group-addon[multiple],.input-group-sm>.input-group-btn>select.btn[multiple]{height:auto}.input-lg,.form-horizontal .form-group-lg .form-control,.input-group-lg>.form-control{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.input-group-lg>.input-group-addon{height:46px;line-height:1.33}.input-group-lg>.input-group-btn>.btn{height:46px;padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}select.input-lg,.form-horizontal .form-group-lg select.form-control,.input-group-lg>select.form-control,.input-group-lg>select.input-group-addon,.input-group-lg>.input-group-btn>select.btn{height:46px;line-height:46px}textarea.input-lg,.form-horizontal .form-group-lg textarea.form-control,.input-group-lg>textarea.form-control,.input-group-lg>textarea.input-group-addon,.input-group-lg>.input-group-btn>textarea.btn,select[multiple].input-lg,.form-horizontal .form-group-lg select.form-control[multiple],.input-group-lg>select.form-control[multiple],.input-group-lg>select.input-group-addon[multiple],.input-group-lg>.input-group-btn>select.btn[multiple]{height:auto}.has-feedback{position:relative}.has-feedback .form-control{padding-right:42.5px}.form-control-feedback{position:absolute;top:25px;right:0;z-index:2;display:block;width:34px;height:34px;line-height:34px;text-align:center}.input-lg+.form-control-feedback,.form-horizontal .form-group-lg .form-control+.form-control-feedback,.input-group-lg>.form-control+.form-control-feedback,.input-group-lg>.input-group-addon+.form-control-feedback,.input-group-lg>.input-group-btn>.btn+.form-control-feedback{width:46px;height:46px;line-height:46px}.input-sm+.form-control-feedback,.form-horizontal .form-group-sm .form-control+.form-control-feedback,.input-group-sm>.form-control+.form-control-feedback,.input-group-sm>.input-group-addon+.form-control-feedback,.input-group-sm>.input-group-btn>.btn+.form-control-feedback{width:30px;height:30px;line-height:30px}.has-success .help-block,.has-success .control-label,.has-success .radio,.has-success .checkbox,.has-success .radio-inline,.has-success .checkbox-inline{color:#3c763d}.has-success .form-control{border-color:#3c763d;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-success .form-control:focus{border-color:#2b542c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #67b168}.has-success .input-group-addon{color:#3c763d;border-color:#3c763d;background-color:#dff0d8}.has-success .form-control-feedback{color:#3c763d}.has-warning .help-block,.has-warning .control-label,.has-warning .radio,.has-warning .checkbox,.has-warning .radio-inline,.has-warning .checkbox-inline{color:#8a6d3b}.has-warning .form-control{border-color:#8a6d3b;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-warning .form-control:focus{border-color:#66512c;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #c0a16b}.has-warning .input-group-addon{color:#8a6d3b;border-color:#8a6d3b;background-color:#fcf8e3}.has-warning .form-control-feedback{color:#8a6d3b}.has-error .help-block,.has-error .control-label,.has-error .radio,.has-error .checkbox,.has-error .radio-inline,.has-error .checkbox-inline{color:#a94442}.has-error .form-control{border-color:#a94442;box-shadow:inset 0 1px 1px rgba(0,0,0,.075)}.has-error .form-control:focus{border-color:#843534;box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #ce8483}.has-error .input-group-addon{color:#a94442;border-color:#a94442;background-color:#f2dede}.has-error .form-control-feedback{color:#a94442}.has-feedback label.sr-only~.form-control-feedback{top:0}.help-block{display:block;margin-top:5px;margin-bottom:10px;color:#737373}.form-horizontal .radio,.form-horizontal .checkbox,.form-horizontal .radio-inline,.form-horizontal .checkbox-inline{margin-top:0;margin-bottom:0;padding-top:7px}.form-horizontal .radio,.form-horizontal .checkbox{min-height:27px}.form-horizontal .form-group{margin-left:-15px;margin-right:-15px}.form-horizontal .form-group:before{content:" ";display:table}.form-horizontal .form-group:after{content:" ";display:table;clear:both}.form-horizontal .has-feedback .form-control-feedback{top:0;right:15px}.btn{display:inline-block;vertical-align:middle;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.btn:focus,.btn:active:focus,.btn.active:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:hover,.btn:focus{color:#333;text-decoration:none}.btn:active,.btn.active{outline:0;background-image:none;box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;pointer-events:none;opacity:.65;filter:alpha(opacity=65);box-shadow:none}.btn-default{color:#333;background-color:#fff;border-color:#ccc}.btn-default:hover,.btn-default:focus,.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{color:#333;background-color:#e6e6e6;border-color:#adadad}.btn-default:active,.btn-default.active,.open>.btn-default.dropdown-toggle{background-image:none}.btn-default.disabled,.btn-default.disabled:hover,.btn-default.disabled:focus,.btn-default.disabled:active,.btn-default.disabled.active,.btn-default[disabled],.btn-default[disabled]:hover,.btn-default[disabled]:focus,.btn-default[disabled]:active,.btn-default[disabled].active,fieldset[disabled] .btn-default,fieldset[disabled] .btn-default:hover,fieldset[disabled] .btn-default:focus,fieldset[disabled] .btn-default:active,fieldset[disabled] .btn-default.active{background-color:#fff;border-color:#ccc}.btn-default .badge{color:#fff;background-color:#333}.btn-primary{color:#fff;background-color:#428bca;border-color:#357ebd}.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{color:#fff;background-color:#3071a9;border-color:#285e8e}.btn-primary:active,.btn-primary.active,.open>.btn-primary.dropdown-toggle{background-image:none}.btn-primary.disabled,.btn-primary.disabled:hover,.btn-primary.disabled:focus,.btn-primary.disabled:active,.btn-primary.disabled.active,.btn-primary[disabled],.btn-primary[disabled]:hover,.btn-primary[disabled]:focus,.btn-primary[disabled]:active,.btn-primary[disabled].active,fieldset[disabled] .btn-primary,fieldset[disabled] .btn-primary:hover,fieldset[disabled] .btn-primary:focus,fieldset[disabled] .btn-primary:active,fieldset[disabled] .btn-primary.active{background-color:#428bca;border-color:#357ebd}.btn-primary .badge{color:#428bca;background-color:#fff}.btn-success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.btn-success:hover,.btn-success:focus,.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{color:#fff;background-color:#449d44;border-color:#398439}.btn-success:active,.btn-success.active,.open>.btn-success.dropdown-toggle{background-image:none}.btn-success.disabled,.btn-success.disabled:hover,.btn-success.disabled:focus,.btn-success.disabled:active,.btn-success.disabled.active,.btn-success[disabled],.btn-success[disabled]:hover,.btn-success[disabled]:focus,.btn-success[disabled]:active,.btn-success[disabled].active,fieldset[disabled] .btn-success,fieldset[disabled] .btn-success:hover,fieldset[disabled] .btn-success:focus,fieldset[disabled] .btn-success:active,fieldset[disabled] .btn-success.active{background-color:#5cb85c;border-color:#4cae4c}.btn-success .badge{color:#5cb85c;background-color:#fff}.btn-info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{color:#fff;background-color:#31b0d5;border-color:#269abc}.btn-info:active,.btn-info.active,.open>.btn-info.dropdown-toggle{background-image:none}.btn-info.disabled,.btn-info.disabled:hover,.btn-info.disabled:focus,.btn-info.disabled:active,.btn-info.disabled.active,.btn-info[disabled],.btn-info[disabled]:hover,.btn-info[disabled]:focus,.btn-info[disabled]:active,.btn-info[disabled].active,fieldset[disabled] .btn-info,fieldset[disabled] .btn-info:hover,fieldset[disabled] .btn-info:focus,fieldset[disabled] .btn-info:active,fieldset[disabled] .btn-info.active{background-color:#5bc0de;border-color:#46b8da}.btn-info .badge{color:#5bc0de;background-color:#fff}.btn-warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{color:#fff;background-color:#ec971f;border-color:#d58512}.btn-warning:active,.btn-warning.active,.open>.btn-warning.dropdown-toggle{background-image:none}.btn-warning.disabled,.btn-warning.disabled:hover,.btn-warning.disabled:focus,.btn-warning.disabled:active,.btn-warning.disabled.active,.btn-warning[disabled],.btn-warning[disabled]:hover,.btn-warning[disabled]:focus,.btn-warning[disabled]:active,.btn-warning[disabled].active,fieldset[disabled] .btn-warning,fieldset[disabled] .btn-warning:hover,fieldset[disabled] .btn-warning:focus,fieldset[disabled] .btn-warning:active,fieldset[disabled] .btn-warning.active{background-color:#f0ad4e;border-color:#eea236}.btn-warning .badge{color:#f0ad4e;background-color:#fff}.btn-danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.btn-danger:hover,.btn-danger:focus,.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{color:#fff;background-color:#c9302c;border-color:#ac2925}.btn-danger:active,.btn-danger.active,.open>.btn-danger.dropdown-toggle{background-image:none}.btn-danger.disabled,.btn-danger.disabled:hover,.btn-danger.disabled:focus,.btn-danger.disabled:active,.btn-danger.disabled.active,.btn-danger[disabled],.btn-danger[disabled]:hover,.btn-danger[disabled]:focus,.btn-danger[disabled]:active,.btn-danger[disabled].active,fieldset[disabled] .btn-danger,fieldset[disabled] .btn-danger:hover,fieldset[disabled] .btn-danger:focus,fieldset[disabled] .btn-danger:active,fieldset[disabled] .btn-danger.active{background-color:#d9534f;border-color:#d43f3a}.btn-danger .badge{color:#d9534f;background-color:#fff}.btn-link{color:#428bca;font-weight:400;cursor:pointer;border-radius:0}.btn-link,.btn-link:active,.btn-link[disabled],fieldset[disabled] .btn-link{background-color:transparent;box-shadow:none}.btn-link,.btn-link:hover,.btn-link:focus,.btn-link:active{border-color:transparent}.btn-link:hover,.btn-link:focus{color:#2a6496;text-decoration:underline;background-color:transparent}.btn-link[disabled]:hover,.btn-link[disabled]:focus,fieldset[disabled] .btn-link:hover,fieldset[disabled] .btn-link:focus{color:#777;text-decoration:none}.btn-lg{padding:10px 16px;font-size:18px;line-height:1.33;border-radius:6px}.btn-sm{padding:5px 10px}.btn-sm,.btn-xs{font-size:12px;line-height:1.5;border-radius:3px}.btn-xs{padding:1px 5px}.btn-block{display:block;width:100%}.btn-block+.btn-block{margin-top:5px}input[type="submit"].btn-block,input[type="reset"].btn-block,input[type="button"].btn-block{width:100%}.fade{opacity:0;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;transition:height .35s ease}.input-group{position:relative;display:table;border-collapse:separate}.input-group[class*="col-"]{float:none;padding-left:0;padding-right:0}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.input-group-addon,.input-group-btn,.input-group .form-control{display:table-cell}.input-group-addon:not(:first-child):not(:last-child),.input-group-btn:not(:first-child):not(:last-child),.input-group .form-control:not(:first-child):not(:last-child){border-radius:0}.input-group-addon{white-space:nowrap}.input-group-addon,.input-group-btn{width:1%;vertical-align:middle}.input-group-addon{padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:1px solid #ccc;border-radius:4px}.input-group-addon.input-sm,.form-horizontal .form-group-sm .input-group-addon.form-control,.input-group-sm>.input-group-addon,.input-group-sm>.input-group-btn>.input-group-addon.btn{padding:5px 10px;font-size:12px;border-radius:3px}.input-group-addon.input-lg,.form-horizontal .form-group-lg .input-group-addon.form-control,.input-group-lg>.input-group-addon,.input-group-lg>.input-group-btn>.input-group-addon.btn{padding:10px 16px;font-size:18px;border-radius:6px}.input-group-addon input[type="radio"],.input-group-addon input[type="checkbox"]{margin-top:0}.input-group .form-control:first-child,.input-group-addon:first-child,.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group>.btn,.input-group-btn:first-child>.dropdown-toggle,.input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle),.input-group-btn:last-child>.btn-group:not(:last-child)>.btn{border-bottom-right-radius:0;border-top-right-radius:0}.input-group-addon:first-child{border-right:0}.input-group .form-control:last-child,.input-group-addon:last-child,.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group>.btn,.input-group-btn:last-child>.dropdown-toggle,.input-group-btn:first-child>.btn:not(:first-child),.input-group-btn:first-child>.btn-group:not(:first-child)>.btn{border-bottom-left-radius:0;border-top-left-radius:0}.input-group-addon:last-child{border-left:0}.input-group-btn{font-size:0;white-space:nowrap}.input-group-btn,.input-group-btn>.btn{position:relative}.input-group-btn>.btn+.btn{margin-left:-1px}.input-group-btn>.btn:hover,.input-group-btn>.btn:focus,.input-group-btn>.btn:active{z-index:2}.input-group-btn:first-child>.btn,.input-group-btn:first-child>.btn-group{margin-right:-1px}.input-group-btn:last-child>.btn,.input-group-btn:last-child>.btn-group{margin-left:-1px}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.pagination>li{display:inline}.pagination>li>a,.pagination>li>span{position:relative;float:left;padding:6px 12px;line-height:1.4285714;text-decoration:none;color:#428bca;background-color:#fff;border:1px solid #ddd;margin-left:-1px}.pagination>li:first-child>a,.pagination>li:first-child>span{margin-left:0;border-bottom-left-radius:4px;border-top-left-radius:4px}.pagination>li:last-child>a,.pagination>li:last-child>span{border-bottom-right-radius:4px;border-top-right-radius:4px}.pagination>li>a:hover,.pagination>li>a:focus,.pagination>li>span:hover,.pagination>li>span:focus{color:#2a6496;background-color:#eee;border-color:#ddd}.pagination>.active>a,.pagination>.active>a:hover,.pagination>.active>a:focus,.pagination>.active>span,.pagination>.active>span:hover,.pagination>.active>span:focus{z-index:2;color:#fff;background-color:#428bca;border-color:#428bca;cursor:default}.pagination>.disabled>span,.pagination>.disabled>span:hover,.pagination>.disabled>span:focus,.pagination>.disabled>a,.pagination>.disabled>a:hover,.pagination>.disabled>a:focus{color:#777;background-color:#fff;border-color:#ddd;cursor:not-allowed}.pagination-lg>li>a,.pagination-lg>li>span{padding:10px 16px;font-size:18px}.pagination-lg>li:first-child>a,.pagination-lg>li:first-child>span{border-bottom-left-radius:6px;border-top-left-radius:6px}.pagination-lg>li:last-child>a,.pagination-lg>li:last-child>span{border-bottom-right-radius:6px;border-top-right-radius:6px}.pagination-sm>li>a,.pagination-sm>li>span{padding:5px 10px;font-size:12px}.pagination-sm>li:first-child>a,.pagination-sm>li:first-child>span{border-bottom-left-radius:3px;border-top-left-radius:3px}.pagination-sm>li:last-child>a,.pagination-sm>li:last-child>span{border-bottom-right-radius:3px;border-top-right-radius:3px}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}.close:hover,.close:focus{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}.modal-open,.modal{overflow:hidden}.modal{display:none;position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{transform:translate3d(0,-25%,0);transition:transform .3s ease-out}.modal.in .modal-dialog{transform:translate3d(0,0,0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;border:1px solid #999;border:1px solid rgba(0,0,0,.2);border-radius:6px;box-shadow:0 3px 9px rgba(0,0,0,.5);background-clip:padding-box;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000}.modal-backdrop.fade{opacity:0;filter:alpha(opacity=0)}.modal-backdrop.in{opacity:.5;filter:alpha(opacity=50)}.modal-header{padding:15px;border-bottom:1px solid #e5e5e5;min-height:16.4285714px}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.4285714}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}.modal-footer:before,.modal-footer:after{content:" ";display:table}.modal-footer:after{clear:both}.modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important;visibility:hidden!important}.affix{position:fixed;transform:translate3d(0,0,0)}.hljs{display:block;overflow-x:auto;padding:.5em;background:#002b36;color:#839496;-webkit-text-size-adjust:none}.hljs-comment,.hljs-template_comment,.diff .hljs-header,.hljs-doctype,.hljs-pi,.lisp .hljs-string,.hljs-javadoc{color:#586e75}.hljs-keyword,.hljs-winutils,.method,.hljs-addition,.css .hljs-tag,.hljs-request,.hljs-status,.nginx .hljs-title{color:#859900}.hljs-number,.hljs-command,.hljs-string,.hljs-tag .hljs-value,.hljs-rules .hljs-value,.hljs-phpdoc,.hljs-dartdoc,.tex .hljs-formula,.hljs-regexp,.hljs-hexcolor,.hljs-link_url{color:#2aa198}.hljs-title,.hljs-localvars,.hljs-chunk,.hljs-decorator,.hljs-built_in,.hljs-identifier,.vhdl .hljs-literal,.hljs-id,.css .hljs-function{color:#268bd2}.hljs-attribute,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number,.hljs-constant,.hljs-class .hljs-title,.hljs-parent,.hljs-type,.hljs-link_reference{color:#b58900}.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-pragma,.hljs-shebang,.hljs-symbol,.hljs-symbol .hljs-string,.diff .hljs-change,.hljs-special,.hljs-attr_selector,.hljs-subst,.hljs-cdata,.css .hljs-pseudo,.hljs-header{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#073642}*,*:before,*:after{box-sizing:border-box}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}images{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd{font-size:1em}code,kbd,pre,samp{font-family:monospace,monospace}samp{font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;margin-right:5px}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}.debug{background-color:#ffc0cb!important}.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ir{background-color:transparent;border:0;overflow:hidden}.ir::before{content:'';display:block;height:150%;width:0}html{font-size:.875em;background:#fff;color:#373D49}html,body{font-family:Georgia,Cambria,serif;height:100%}body{font-size:1rem;font-weight:400;line-height:2rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}li{font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-left:1rem}li>ul,li>ol{margin-bottom:0}p{padding-top:.66001rem;font-feature-settings:'kern' 1,'onum' 1,'liga' 1;margin-top:0}p,pre{margin-bottom:1.33999rem}pre{font-size:1rem;padding:.66001rem 9.5px 9.5px;line-height:2rem;background:linear-gradient(to bottom,#fff 0,#fff .75rem,#f5f7fa .75rem,#f5f7fa 2.75rem,#fff 2.75rem,#fff 4rem);background-size:100% 4rem;border-color:#D3DAEA}blockquote{margin:0}blockquote p{font-size:1rem;margin-bottom:.33999rem;font-style:italic;padding:.66001rem 1rem 1rem;border-left:3px solid #A0AABF}th,td{padding:12px}h1,h2,h3,h4,h5,h6{font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-feature-settings:'dlig' 1,'liga' 1,'lnum' 1,'kern' 1;font-style:normal;font-weight:600;margin-top:0}h1{line-height:3rem;font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h2,h3{line-height:3rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}a{cursor:pointer;color:#35D7BB;text-decoration:none}a:hover,a:focus{border-bottom-color:#35D7BB;color:#dff9f4}img{height:auto;max-width:100%}.g{display:block}.g:after{clear:both;content:'';display:table}.g-b{float:left;margin:0;width:100%}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--center{display:block;float:none;margin:0 auto}.g-b--right{float:right}.g-b--1of1{width:100%}.g-b--1of2,.g-b--2of4,.g-b--3of6,.g-b--4of8,.g-b--5of10,.g-b--6of12{width:50%}.g-b--1of3,.g-b--2of6,.g-b--4of12{width:33.333%}.g-b--2of3,.g-b--4of6,.g-b--8of12{width:66.666%}.g-b--1of4,.g-b--2of8,.g-b--3of12{width:25%}.g-b--3of4,.g-b--6of8,.g-b--9of12{width:75%}.g-b--1of5,.g-b--2of10{width:20%}.g-b--2of5,.g-b--4of10{width:40%}.g-b--3of5,.g-b--6of10{width:60%}.g-b--4of5,.g-b--8of10{width:80%}.g-b--1of6,.g-b--2of12{width:16.666%}.g-b--5of6,.g-b--10of12{width:83.333%}.g-b--1of8{width:12.5%}.g-b--3of8{width:37.5%}.g-b--5of8{width:62.5%}.g-b--7of8{width:87.5%}.g-b--1of10{width:10%}.g-b--3of10{width:30%}.g-b--7of10{width:70%}.g-b--9of10{width:90%}.g-b--1of12{width:8.333%}.g-b--5of12{width:41.666%}.g-b--7of12{width:58.333%}.g-b--11of12{width:91.666%}.g-b--push--1of1{margin-left:100%}.g-b--push--1of2,.g-b--push--2of4,.g-b--push--3of6,.g-b--push--4of8,.g-b--push--5of10,.g-b--push--6of12{margin-left:50%}.g-b--push--1of3,.g-b--push--2of6,.g-b--push--4of12{margin-left:33.333%}.g-b--push--2of3,.g-b--push--4of6,.g-b--push--8of12{margin-left:66.666%}.g-b--push--1of4,.g-b--push--2of8,.g-b--push--3of12{margin-left:25%}.g-b--push--3of4,.g-b--push--6of8,.g-b--push--9of12{margin-left:75%}.g-b--push--1of5,.g-b--push--2of10{margin-left:20%}.g-b--push--2of5,.g-b--push--4of10{margin-left:40%}.g-b--push--3of5,.g-b--push--6of10{margin-left:60%}.g-b--push--4of5,.g-b--push--8of10{margin-left:80%}.g-b--push--1of6,.g-b--push--2of12{margin-left:16.666%}.g-b--push--5of6,.g-b--push--10of12{margin-left:83.333%}.g-b--push--1of8{margin-left:12.5%}.g-b--push--3of8{margin-left:37.5%}.g-b--push--5of8{margin-left:62.5%}.g-b--push--7of8{margin-left:87.5%}.g-b--push--1of10{margin-left:10%}.g-b--push--3of10{margin-left:30%}.g-b--push--7of10{margin-left:70%}.g-b--push--9of10{margin-left:90%}.g-b--push--1of12{margin-left:8.333%}.g-b--push--5of12{margin-left:41.666%}.g-b--push--7of12{margin-left:58.333%}.g-b--push--11of12{margin-left:91.666%}.g-b--pull--1of1{margin-right:100%}.g-b--pull--1of2,.g-b--pull--2of4,.g-b--pull--3of6,.g-b--pull--4of8,.g-b--pull--5of10,.g-b--pull--6of12{margin-right:50%}.g-b--pull--1of3,.g-b--pull--2of6,.g-b--pull--4of12{margin-right:33.333%}.g-b--pull--2of3,.g-b--pull--4of6,.g-b--pull--8of12{margin-right:66.666%}.g-b--pull--1of4,.g-b--pull--2of8,.g-b--pull--3of12{margin-right:25%}.g-b--pull--3of4,.g-b--pull--6of8,.g-b--pull--9of12{margin-right:75%}.g-b--pull--1of5,.g-b--pull--2of10{margin-right:20%}.g-b--pull--2of5,.g-b--pull--4of10{margin-right:40%}.g-b--pull--3of5,.g-b--pull--6of10{margin-right:60%}.g-b--pull--4of5,.g-b--pull--8of10{margin-right:80%}.g-b--pull--1of6,.g-b--pull--2of12{margin-right:16.666%}.g-b--pull--5of6,.g-b--pull--10of12{margin-right:83.333%}.g-b--pull--1of8{margin-right:12.5%}.g-b--pull--3of8{margin-right:37.5%}.g-b--pull--5of8{margin-right:62.5%}.g-b--pull--7of8{margin-right:87.5%}.g-b--pull--1of10{margin-right:10%}.g-b--pull--3of10{margin-right:30%}.g-b--pull--7of10{margin-right:70%}.g-b--pull--9of10{margin-right:90%}.g-b--pull--1of12{margin-right:8.333%}.g-b--pull--5of12{margin-right:41.666%}.g-b--pull--7of12{margin-right:58.333%}.g-b--pull--11of12{margin-right:91.666%}.splashscreen{position:fixed;top:0;left:0;width:100%;height:100%;background-color:#373D49;z-index:22}.splashscreen-dillinger{width:260px;height:auto;display:block;margin:0 auto;padding-bottom:3rem}.splashscreen p{font-size:1.25rem;padding-top:.56251rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-align:center;max-width:500px;margin:0 auto;color:#FFF}.sp-center{position:relative;transform:translateY(-50%);top:50%}.open-menu>.wrapper{overflow-x:hidden}.page{margin:0 auto;position:relative;top:0;left:0;width:100%;height:100%;z-index:2;transition:all .25s ease-in-out;background-color:#fff;padding-top:51px;will-change:left}.open-menu .page{left:270px}.title{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;color:#A0AABF;letter-spacing:1px;text-transform:uppercase;padding-left:16px;padding-right:16px;margin-top:1rem}.split-preview .title{padding-left:0}.title-document{line-height:1rem;font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem;font-weight:400;font-family:"Ubuntu Mono",Monaco;color:#373D49;padding-left:16px;padding-right:16px;width:80%;min-width:300px;outline:0;border:none}.icon{display:block;margin:0 auto;width:36px;height:36px;border-radius:3px;text-align:center}.icon svg{display:inline-block;margin-left:auto;margin-right:auto}.icon-preview{background-color:#373D49;line-height:40px}.icon-preview svg{width:19px;height:12px}.icon-settings{background-color:#373D49;line-height:44px}.icon-settings svg{width:18px;height:18px}.icon-link{width:16px;height:16px;line-height:1;margin-right:24px;text-align:right}.navbar{background-color:#373D49;height:51px;width:100%;position:fixed;top:0;left:0;z-index:6;transition:all .25s ease-in-out;will-change:left}.navbar:after{content:"";display:table;clear:both}.open-menu .navbar{left:270px}.navbar-brand{float:left;margin:0 0 0 24px;padding:0;line-height:42px}.navbar-brand svg{width:85px;height:11px}.nav-left{float:left}.nav-right{float:right}.nav-sidebar{width:100%}.menu{list-style:none;margin:0;padding:0}.menu a{border:0;color:#A0AABF;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;outline:none;text-transform:uppercase}.menu a:hover{color:#35D7BB}.menu .menu-item{border:0;display:none;float:left;margin:0;position:relative}.menu .menu-item>a{display:block;font-size:12px;height:51px;letter-spacing:1px;line-height:51px;padding:0 24px}.menu .menu-item--settings,.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar,.menu .menu-item--link-unlink.in-sidebar,.menu .menu-item--documents.in-sidebar{display:block}.menu .menu-item--documents{padding-bottom:1rem}.menu .menu-item.open>a{background-color:#1D212A}.menu .menu-item-icon>a{height:auto;padding:0}.menu .menu-item-icon:hover>a{background-color:transparent}.menu .menu-link.open i{background-color:#1D212A}.menu .menu-link.open g{fill:#35D7BB}.menu .menu-link-preview,.menu .menu-link-settings{margin-top:8px;width:51px}.menu-sidebar{width:100%}.menu-sidebar .menu-item{float:none;margin-bottom:1px;width:100%}.menu-sidebar .menu-item.open>a{background-color:#373D49}.menu-sidebar .open .caret{transform:rotate(180deg)}.menu-sidebar>.menu-item:hover .dropdown a,.menu-sidebar>.menu-item:hover .settings a{background-color:transparent}.menu-sidebar .menu-link{background-color:#373D49;font-weight:600}.menu-sidebar .menu-link:after{content:"";display:table;clear:both}.menu-sidebar .menu-link>span{float:left}.menu-sidebar .menu-link>.caret{float:right;text-align:right;top:22px}.menu-sidebar .dropdown,.menu-sidebar .settings{background-color:transparent;position:static;width:100%}.dropdown{position:absolute;right:0;top:51px;width:188px}.dropdown,.settings{display:none;background-color:#1D212A}.dropdown{padding:0}.dropdown,.settings,.sidebar-list{list-style:none;margin:0}.sidebar-list{padding:0}.dropdown li{margin:32px 0;padding:0 0 0 32px}.dropdown li,.settings li{line-height:1}.sidebar-list li{line-height:1;margin:32px 0;padding:0 0 0 32px}.dropdown a{color:#D0D6E2}.dropdown a,.settings a,.sidebar-list a{display:block;text-transform:none}.sidebar-list a{color:#D0D6E2}.dropdown a:after,.settings a:after,.sidebar-list a:after{content:"";display:table;clear:both}.dropdown .icon,.settings .icon,.sidebar-list .icon{float:right}.open .dropdown,.open .settings,.open .sidebar-list{display:block}.open .dropdown.collapse,.open .collapse.settings,.open .sidebar-list.collapse{display:none}.open .dropdown.collapse.in,.open .collapse.in.settings,.open .sidebar-list.collapse.in{display:block}.dropdown .unlinked .icon,.settings .unlinked .icon,.sidebar-list .unlinked .icon{opacity:.3}.dropdown.documents li,.documents.settings li,.sidebar-list.documents li{background-image:url("../img/icons/file.svg");background-position:240px center;background-repeat:no-repeat;background-size:14px 16px;padding:3px 32px}.dropdown.documents li.octocat,.documents.settings li.octocat,.sidebar-list.documents li.octocat{background-image:url("../img/icons/octocat.svg");background-position:234px center;background-size:24px 24px}.dropdown.documents li:last-child,.documents.settings li:last-child,.sidebar-list.documents li:last-child{margin-bottom:1rem}.dropdown.documents li.active a,.documents.settings li.active a,.sidebar-list.documents li.active a{color:#35D7BB}.settings{position:fixed;top:67px;right:16px;border-radius:3px;width:288px;background-color:#373D49;padding:16px;z-index:7}.show-settings .settings{display:block}.settings .has-checkbox{float:left}.settings form{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.settings input{width:20%}.settings a{font-size:1.25rem;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;line-height:28px;color:#D0D6E2}.settings a:after{content:"";display:table;clear:both}.settings a:hover{color:#35D7BB}.settings li{border-bottom:1px solid #4F535B;margin:0;padding:16px 0}.settings li:last-child{border-bottom:none}.brand{border:none;display:block}.brand:hover g{fill:#35D7BB}.toggle{display:block;float:left;height:16px;padding:25px 16px 26px;width:40px}.toggle span:after,.toggle span:before{content:'';left:0;position:absolute;top:-6px}.toggle span:after{top:6px}.toggle span{display:block;position:relative}.toggle span,.toggle span:after,.toggle span:before{-webkit-backface-visibility:hidden;backface-visibility:hidden;background-color:#D3DAEA;height:2px;transition:all .3s;width:20px}.open-menu .toggle span{background-color:transparent}.open-menu .toggle span:before{transform:rotate(45deg) translate(3px,3px)}.open-menu .toggle span:after{transform:rotate(-45deg) translate(5px,-6px)}.caret{display:inline-block;width:0;height:0;margin-left:6px;vertical-align:middle;position:relative;top:-1px;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.sidebar{overflow:auto;height:100%;padding-right:15px;padding-bottom:15px;width:285px}.sidebar-wrapper{-webkit-overflow-scrolling:touch;background-color:#2B2F36;left:0;height:100%;overflow-y:hidden;position:fixed;top:0;width:285px;z-index:1}.sidebar-branding{width:160px;padding:0;margin:16px auto}.header{border-bottom:1px solid #E8E8E8;position:relative}.words,.characters{line-height:1rem;font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem;font-weight:500;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;color:#A0AABF;letter-spacing:1px;text-transform:uppercase;z-index:5;position:absolute;right:16px;top:0}.words span,.characters span{color:#000}.words+.characters{top:22px}.btn{text-align:center;display:inline-block;width:100%;text-transform:uppercase;font-weight:600;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;text-shadow:0 1px 0 #1b8b77;padding:16px 24px;background-color:#35D7BB;border-radius:3px;margin:0 auto 16px;line-height:1;color:#fff;transition:all .15s linear;-webkit-font-smoothing:antialiased}.btn--new,.btn--save{display:block;width:238px}.btn--new:hover,.btn--new:focus,.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 3px #24b59c;text-shadow:0 1px 0 #24b59c}.btn--save{background-color:#4A5261;text-shadow:0 1px 1px #1e2127}.btn--save:hover,.btn--save:focus{color:#fff;border-bottom-color:transparent;box-shadow:0 1px 5px #08090a;text-shadow:none}.btn--delete{display:block;width:238px;background-color:transparent;font-size:12px;text-shadow:none}.btn--delete:hover,.btn--delete:focus{color:#fff;border-bottom-color:transparent;text-shadow:0 1px 0 #08090a;opacity:.8}.btn--delete-modal,.btn--ok,.btn--close{border-top:0;background-color:#4A5261;text-shadow:0 1px 0 #08090a;margin:0}.btn--delete-modal:hover,.btn--delete-modal:focus,.btn--ok:hover,.btn--ok:focus,.btn--close:hover,.btn--close:focus{color:#fff;background-color:#292d36;text-shadow:none}.btn--delete-modal{display:inline;width:auto}.overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(55,61,73,.8);transition:all .25s ease-in-out;transition-timing-function:ease-out;will-change:left,opacity,visibility;z-index:5;opacity:0;visibility:hidden}.show-settings .overlay{visibility:visible;opacity:1}.switch{float:right;line-height:1}.switch input{display:none}.switch small{display:inline-block;cursor:pointer;padding:0 24px 0 0;transition:all ease .2s;background-color:#2B2F36;border-color:#2B2F36}.switch small,.switch small:before{border-radius:30px;box-shadow:inset 0 0 2px 0 #14171F}.switch small:before{display:block;content:'';width:28px;height:28px;background:#fff}.switch.checked small{padding-right:0;padding-left:24px;background-color:#35D7BB;box-shadow:none}.modal--dillinger.about .modal-dialog{font-size:1.25rem;max-width:500px}.modal--dillinger.scope .modal-dialog{max-width:300px;margin:5rem auto}.modal--dillinger .modal-dialog{max-width:600px;width:auto;margin:5rem auto}.modal--dillinger .modal-content{background:#373D49;border-radius:3px;box-shadow:0 2px 5px 0 #2C3B59;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;padding:2rem}.modal--dillinger ul{list-style-type:disc;margin:1rem 0;padding:0 0 0 1rem}.modal--dillinger li{padding:0;margin:0}.modal--dillinger .modal-header{border:0;padding:0}.modal--dillinger .modal-body{padding:0}.modal--dillinger .modal-footer{border:0;padding:0}.modal--dillinger .close{color:#fff;opacity:1}.modal-backdrop{background-color:#373D49}.pagination--dillinger{padding:0!important;margin:1.5rem 0!important;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-direction:row;flex-direction:row;-ms-flex-align:center;align-items:center;-ms-flex-line-pack:stretch;align-content:stretch}.pagination--dillinger li{display:-ms-flexbox;display:flex;-ms-flex-positive:1;flex-grow:1;text-align:center}.pagination--dillinger li:first-child>a,.pagination--dillinger li.disabled>a,.pagination--dillinger li.disabled>a:hover,.pagination--dillinger li.disabled>a:focus,.pagination--dillinger li>a{background-color:transparent;border-color:#4F535B;border-right-color:transparent}.pagination--dillinger li.active>a,.pagination--dillinger li.active>a:hover,.pagination--dillinger li.active>a:focus{border-color:#4A5261;background-color:#4A5261;color:#fff}.pagination--dillinger li>a{float:none;color:#fff;width:100%;display:block;text-align:center;margin:0;border-right-color:transparent;padding:6px}.pagination--dillinger li>a:hover,.pagination--dillinger li>a:focus{border-color:#35D7BB;background-color:#35D7BB;color:#fff}.pagination--dillinger li:last-child a{border-color:#4F535B}.pagination--dillinger li:first-child a{border-right-color:transparent}.diNotify{position:absolute;z-index:9999;left:0;right:0;top:0;margin:0 auto;max-width:400px;text-align:center;transition:top .5s ease-in-out,opacity .5s ease-in-out;visibility:hidden}.diNotify-body{-webkit-font-smoothing:antialiased;background-color:#35D7BB;background:#666E7F;border-radius:3px;color:#fff;font-family:"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;overflow:hidden;padding:1rem 2rem .5rem;display:-ms-flexbox;display:flex;-ms-flex-align:baseline;align-items:baseline;-ms-flex-pack:center;justify-content:center}.diNotify-icon{display:block;width:16px;height:16px;line-height:16px;position:relative;top:3px}.diNotify-message{padding-left:1rem}.zen-wrapper{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;z-index:10;background-color:#FFF;opacity:0;transition:opacity .25s ease-in-out}.zen-wrapper.on{opacity:1}.enter-zen-mode{background-image:url("../img/icons/enter-zen.svg");right:.5rem;top:.313rem;display:none}.enter-zen-mode,.close-zen-mode{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;background-repeat:no-repeat;width:32px;height:32px;display:block;position:absolute}.close-zen-mode{background-image:url("../img/icons/exit-zen.svg");right:1rem;top:1rem}.zen-page{position:relative;top:0;bottom:0;z-index:11;height:100%;width:100%}#zen{font-size:1.25rem;width:300px;height:80%;margin:0 auto;position:relative;top:10%}#zen:before,#zen:after{content:"";position:absolute;height:10%;width:100%;z-index:12;pointer-events:none}#preview .table{width:auto}.ui-resizable{position:relative}.ui-resizable-handle{position:absolute;font-size:.1px;z-index:99999;display:block}.ui-resizable-e{background-color:#666;border-right:8px solid #e8e8e8;border-left:1px solid #222;width:10px;z-index:88!important;position:relative}.ui-resizable-e:after{content:"-";display:block;position:absolute;top:calc(50% - 16px);left:0;height:25px;width:2px;background-color:rgba(0,0,0,.4);margin:3px}#editor{cursor:ew-resize;position:relative;z-index:auto}.profile-pic{float:left;width:250px}#_default_ a::before{color:#A0AABF}#_default_ img{display:none}#_default_ #_default_{display:block;float:left;max-width:38%;word-wrap:break-word}#_default_ .default-ad{display:none}#_default_ ._default_{display:block}#_default_ a{color:#35d7bb;text-decoration:none}#_default_ a:hover{color:#8ae8d8}#_default_ .default-image{display:none}#_default_ .default-title:after{content:" — "}#_default_ .default-title,#_default_ .default-description{display:inline}#_default_ .default-title{position:relative;font-weight:600;display:none}#_default_ a:before{position:relative;top:0;padding:5px;color:#a0aabf;content:"Ad";text-transform:uppercase;font-size:8px;font-family:Verdana,sans-serif}#_default_{display:block;float:left;max-width:38%;word-wrap:break-word}#_default_ ._default_{display:block;font-size:.75rem;height:51px;letter-spacing:1px;line-height:1rem;padding:18px 24px}body{max-width:1024px;margin:0 auto;overflow:auto;padding:2%}.split{overflow:scroll;padding:0!important;-webkit-overflow-scrolling:touch}.split-editor{padding-left:0;padding-right:0;position:relative;z-index:3}.show-preview .split-editor{display:none}.split-preview{background-color:#fff;display:none;top:0;position:relative;z-index:4}.show-preview .split-preview{display:block}#editor{font-size:1rem;font-family:"Ubuntu Mono",Monaco;font-weight:400;line-height:2rem;width:100%;height:100%}#editor .ace_gutter{-webkit-font-smoothing:antialiased}.editor-header{width:50%;float:left;border-bottom:1px solid #E8E8E8;position:relative}.editor-header--first{border-right:1px solid #E8E8E8}.editor-header .title{display:inline-block}.preview-html{padding:15px}.preview-html a{color:#A0AABF;text-decoration:underline}.preview-src{white-space:normal}.preview-mode-toggle-src{background-image:url("../img/icons/code.svg")}.preview-mode-toggle-src,.preview-mode-toggle-html{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0;background-repeat:no-repeat;width:32px;height:32px;display:block;position:absolute;right:.5rem;top:.5rem;display:none}.preview-mode-toggle-html{background-image:url("../img/icons/eye.svg")}.sr-only{visibility:hidden;text-overflow:110%;overflow:hidden;top:-100px;position:absolute}.mnone{margin:0!important}@media screen and (min-width:27.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--m1of1{width:100%}.g-b--m1of2,.g-b--m2of4,.g-b--m3of6,.g-b--m4of8,.g-b--m5of10,.g-b--m6of12{width:50%}.g-b--m1of3,.g-b--m2of6,.g-b--m4of12{width:33.333%}.g-b--m2of3,.g-b--m4of6,.g-b--m8of12{width:66.666%}.g-b--m1of4,.g-b--m2of8,.g-b--m3of12{width:25%}.g-b--m3of4,.g-b--m6of8,.g-b--m9of12{width:75%}.g-b--m1of5,.g-b--m2of10{width:20%}.g-b--m2of5,.g-b--m4of10{width:40%}.g-b--m3of5,.g-b--m6of10{width:60%}.g-b--m4of5,.g-b--m8of10{width:80%}.g-b--m1of6,.g-b--m2of12{width:16.666%}.g-b--m5of6,.g-b--m10of12{width:83.333%}.g-b--m1of8{width:12.5%}.g-b--m3of8{width:37.5%}.g-b--m5of8{width:62.5%}.g-b--m7of8{width:87.5%}.g-b--m1of10{width:10%}.g-b--m3of10{width:30%}.g-b--m7of10{width:70%}.g-b--m9of10{width:90%}.g-b--m1of12{width:8.333%}.g-b--m5of12{width:41.666%}.g-b--m7of12{width:58.333%}.g-b--m11of12{width:91.666%}.g-b--push--m1of1{margin-left:100%}.g-b--push--m1of2,.g-b--push--m2of4,.g-b--push--m3of6,.g-b--push--m4of8,.g-b--push--m5of10,.g-b--push--m6of12{margin-left:50%}.g-b--push--m1of3,.g-b--push--m2of6,.g-b--push--m4of12{margin-left:33.333%}.g-b--push--m2of3,.g-b--push--m4of6,.g-b--push--m8of12{margin-left:66.666%}.g-b--push--m1of4,.g-b--push--m2of8,.g-b--push--m3of12{margin-left:25%}.g-b--push--m3of4,.g-b--push--m6of8,.g-b--push--m9of12{margin-left:75%}.g-b--push--m1of5,.g-b--push--m2of10{margin-left:20%}.g-b--push--m2of5,.g-b--push--m4of10{margin-left:40%}.g-b--push--m3of5,.g-b--push--m6of10{margin-left:60%}.g-b--push--m4of5,.g-b--push--m8of10{margin-left:80%}.g-b--push--m1of6,.g-b--push--m2of12{margin-left:16.666%}.g-b--push--m5of6,.g-b--push--m10of12{margin-left:83.333%}.g-b--push--m1of8{margin-left:12.5%}.g-b--push--m3of8{margin-left:37.5%}.g-b--push--m5of8{margin-left:62.5%}.g-b--push--m7of8{margin-left:87.5%}.g-b--push--m1of10{margin-left:10%}.g-b--push--m3of10{margin-left:30%}.g-b--push--m7of10{margin-left:70%}.g-b--push--m9of10{margin-left:90%}.g-b--push--m1of12{margin-left:8.333%}.g-b--push--m5of12{margin-left:41.666%}.g-b--push--m7of12{margin-left:58.333%}.g-b--push--m11of12{margin-left:91.666%}.g-b--pull--m1of1{margin-right:100%}.g-b--pull--m1of2,.g-b--pull--m2of4,.g-b--pull--m3of6,.g-b--pull--m4of8,.g-b--pull--m5of10,.g-b--pull--m6of12{margin-right:50%}.g-b--pull--m1of3,.g-b--pull--m2of6,.g-b--pull--m4of12{margin-right:33.333%}.g-b--pull--m2of3,.g-b--pull--m4of6,.g-b--pull--m8of12{margin-right:66.666%}.g-b--pull--m1of4,.g-b--pull--m2of8,.g-b--pull--m3of12{margin-right:25%}.g-b--pull--m3of4,.g-b--pull--m6of8,.g-b--pull--m9of12{margin-right:75%}.g-b--pull--m1of5,.g-b--pull--m2of10{margin-right:20%}.g-b--pull--m2of5,.g-b--pull--m4of10{margin-right:40%}.g-b--pull--m3of5,.g-b--pull--m6of10{margin-right:60%}.g-b--pull--m4of5,.g-b--pull--m8of10{margin-right:80%}.g-b--pull--m1of6,.g-b--pull--m2of12{margin-right:16.666%}.g-b--pull--m5of6,.g-b--pull--m10of12{margin-right:83.333%}.g-b--pull--m1of8{margin-right:12.5%}.g-b--pull--m3of8{margin-right:37.5%}.g-b--pull--m5of8{margin-right:62.5%}.g-b--pull--m7of8{margin-right:87.5%}.g-b--pull--m1of10{margin-right:10%}.g-b--pull--m3of10{margin-right:30%}.g-b--pull--m7of10{margin-right:70%}.g-b--pull--m9of10{margin-right:90%}.g-b--pull--m1of12{margin-right:8.333%}.g-b--pull--m5of12{margin-right:41.666%}.g-b--pull--m7of12{margin-right:58.333%}.g-b--pull--m11of12{margin-right:91.666%}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:400px}#editor{font-size:1rem}}@media screen and (min-width:46.25em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--t1of1{width:100%}.g-b--t1of2,.g-b--t2of4,.g-b--t3of6,.g-b--t4of8,.g-b--t5of10,.g-b--t6of12{width:50%}.g-b--t1of3,.g-b--t2of6,.g-b--t4of12{width:33.333%}.g-b--t2of3,.g-b--t4of6,.g-b--t8of12{width:66.666%}.g-b--t1of4,.g-b--t2of8,.g-b--t3of12{width:25%}.g-b--t3of4,.g-b--t6of8,.g-b--t9of12{width:75%}.g-b--t1of5,.g-b--t2of10{width:20%}.g-b--t2of5,.g-b--t4of10{width:40%}.g-b--t3of5,.g-b--t6of10{width:60%}.g-b--t4of5,.g-b--t8of10{width:80%}.g-b--t1of6,.g-b--t2of12{width:16.666%}.g-b--t5of6,.g-b--t10of12{width:83.333%}.g-b--t1of8{width:12.5%}.g-b--t3of8{width:37.5%}.g-b--t5of8{width:62.5%}.g-b--t7of8{width:87.5%}.g-b--t1of10{width:10%}.g-b--t3of10{width:30%}.g-b--t7of10{width:70%}.g-b--t9of10{width:90%}.g-b--t1of12{width:8.333%}.g-b--t5of12{width:41.666%}.g-b--t7of12{width:58.333%}.g-b--t11of12{width:91.666%}.g-b--push--t1of1{margin-left:100%}.g-b--push--t1of2,.g-b--push--t2of4,.g-b--push--t3of6,.g-b--push--t4of8,.g-b--push--t5of10,.g-b--push--t6of12{margin-left:50%}.g-b--push--t1of3,.g-b--push--t2of6,.g-b--push--t4of12{margin-left:33.333%}.g-b--push--t2of3,.g-b--push--t4of6,.g-b--push--t8of12{margin-left:66.666%}.g-b--push--t1of4,.g-b--push--t2of8,.g-b--push--t3of12{margin-left:25%}.g-b--push--t3of4,.g-b--push--t6of8,.g-b--push--t9of12{margin-left:75%}.g-b--push--t1of5,.g-b--push--t2of10{margin-left:20%}.g-b--push--t2of5,.g-b--push--t4of10{margin-left:40%}.g-b--push--t3of5,.g-b--push--t6of10{margin-left:60%}.g-b--push--t4of5,.g-b--push--t8of10{margin-left:80%}.g-b--push--t1of6,.g-b--push--t2of12{margin-left:16.666%}.g-b--push--t5of6,.g-b--push--t10of12{margin-left:83.333%}.g-b--push--t1of8{margin-left:12.5%}.g-b--push--t3of8{margin-left:37.5%}.g-b--push--t5of8{margin-left:62.5%}.g-b--push--t7of8{margin-left:87.5%}.g-b--push--t1of10{margin-left:10%}.g-b--push--t3of10{margin-left:30%}.g-b--push--t7of10{margin-left:70%}.g-b--push--t9of10{margin-left:90%}.g-b--push--t1of12{margin-left:8.333%}.g-b--push--t5of12{margin-left:41.666%}.g-b--push--t7of12{margin-left:58.333%}.g-b--push--t11of12{margin-left:91.666%}.g-b--pull--t1of1{margin-right:100%}.g-b--pull--t1of2,.g-b--pull--t2of4,.g-b--pull--t3of6,.g-b--pull--t4of8,.g-b--pull--t5of10,.g-b--pull--t6of12{margin-right:50%}.g-b--pull--t1of3,.g-b--pull--t2of6,.g-b--pull--t4of12{margin-right:33.333%}.g-b--pull--t2of3,.g-b--pull--t4of6,.g-b--pull--t8of12{margin-right:66.666%}.g-b--pull--t1of4,.g-b--pull--t2of8,.g-b--pull--t3of12{margin-right:25%}.g-b--pull--t3of4,.g-b--pull--t6of8,.g-b--pull--t9of12{margin-right:75%}.g-b--pull--t1of5,.g-b--pull--t2of10{margin-right:20%}.g-b--pull--t2of5,.g-b--pull--t4of10{margin-right:40%}.g-b--pull--t3of5,.g-b--pull--t6of10{margin-right:60%}.g-b--pull--t4of5,.g-b--pull--t8of10{margin-right:80%}.g-b--pull--t1of6,.g-b--pull--t2of12{margin-right:16.666%}.g-b--pull--t5of6,.g-b--pull--t10of12{margin-right:83.333%}.g-b--pull--t1of8{margin-right:12.5%}.g-b--pull--t3of8{margin-right:37.5%}.g-b--pull--t5of8{margin-right:62.5%}.g-b--pull--t7of8{margin-right:87.5%}.g-b--pull--t1of10{margin-right:10%}.g-b--pull--t3of10{margin-right:30%}.g-b--pull--t7of10{margin-right:70%}.g-b--pull--t9of10{margin-right:90%}.g-b--pull--t1of12{margin-right:8.333%}.g-b--pull--t5of12{margin-right:41.666%}.g-b--pull--t7of12{margin-right:58.333%}.g-b--pull--t11of12{margin-right:91.666%}.splashscreen-dillinger{width:500px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--save-to,.menu .menu-item--import-from{display:block}.menu .menu-item--preview,.menu .menu-item--save-to.in-sidebar,.menu .menu-item--import-from.in-sidebar{display:none}.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog{font-size:1.25rem}.enter-zen-mode{display:block}.close-zen-mode{right:3rem;top:3rem}#zen{font-size:1.25rem;width:500px}.split-editor{border-right:1px solid #E8E8E8;float:left;padding-right:16px;width:50%}.show-preview .split-editor{display:block}.split-preview{display:block;float:right;position:relative;top:0;width:50%}#editor{font-size:1rem}.preview-mode-toggle-src,.preview-mode-toggle-html{display:block}}@media screen and (min-width:62.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.g{margin-left:-16px;margin-right:-16px}.g-b{padding-left:16px;padding-right:16px}.g-b--d1of1{width:100%}.g-b--d1of2,.g-b--d2of4,.g-b--d3of6,.g-b--d4of8,.g-b--d5of10,.g-b--d6of12{width:50%}.g-b--d1of3,.g-b--d2of6,.g-b--d4of12{width:33.333%}.g-b--d2of3,.g-b--d4of6,.g-b--d8of12{width:66.666%}.g-b--d1of4,.g-b--d2of8,.g-b--d3of12{width:25%}.g-b--d3of4,.g-b--d6of8,.g-b--d9of12{width:75%}.g-b--d1of5,.g-b--d2of10{width:20%}.g-b--d2of5,.g-b--d4of10{width:40%}.g-b--d3of5,.g-b--d6of10{width:60%}.g-b--d4of5,.g-b--d8of10{width:80%}.g-b--d1of6,.g-b--d2of12{width:16.666%}.g-b--d5of6,.g-b--d10of12{width:83.333%}.g-b--d1of8{width:12.5%}.g-b--d3of8{width:37.5%}.g-b--d5of8{width:62.5%}.g-b--d7of8{width:87.5%}.g-b--d1of10{width:10%}.g-b--d3of10{width:30%}.g-b--d7of10{width:70%}.g-b--d9of10{width:90%}.g-b--d1of12{width:8.333%}.g-b--d5of12{width:41.666%}.g-b--d7of12{width:58.333%}.g-b--d11of12{width:91.666%}.g-b--push--d1of1{margin-left:100%}.g-b--push--d1of2,.g-b--push--d2of4,.g-b--push--d3of6,.g-b--push--d4of8,.g-b--push--d5of10,.g-b--push--d6of12{margin-left:50%}.g-b--push--d1of3,.g-b--push--d2of6,.g-b--push--d4of12{margin-left:33.333%}.g-b--push--d2of3,.g-b--push--d4of6,.g-b--push--d8of12{margin-left:66.666%}.g-b--push--d1of4,.g-b--push--d2of8,.g-b--push--d3of12{margin-left:25%}.g-b--push--d3of4,.g-b--push--d6of8,.g-b--push--d9of12{margin-left:75%}.g-b--push--d1of5,.g-b--push--d2of10{margin-left:20%}.g-b--push--d2of5,.g-b--push--d4of10{margin-left:40%}.g-b--push--d3of5,.g-b--push--d6of10{margin-left:60%}.g-b--push--d4of5,.g-b--push--d8of10{margin-left:80%}.g-b--push--d1of6,.g-b--push--d2of12{margin-left:16.666%}.g-b--push--d5of6,.g-b--push--d10of12{margin-left:83.333%}.g-b--push--d1of8{margin-left:12.5%}.g-b--push--d3of8{margin-left:37.5%}.g-b--push--d5of8{margin-left:62.5%}.g-b--push--d7of8{margin-left:87.5%}.g-b--push--d1of10{margin-left:10%}.g-b--push--d3of10{margin-left:30%}.g-b--push--d7of10{margin-left:70%}.g-b--push--d9of10{margin-left:90%}.g-b--push--d1of12{margin-left:8.333%}.g-b--push--d5of12{margin-left:41.666%}.g-b--push--d7of12{margin-left:58.333%}.g-b--push--d11of12{margin-left:91.666%}.g-b--pull--d1of1{margin-right:100%}.g-b--pull--d1of2,.g-b--pull--d2of4,.g-b--pull--d3of6,.g-b--pull--d4of8,.g-b--pull--d5of10,.g-b--pull--d6of12{margin-right:50%}.g-b--pull--d1of3,.g-b--pull--d2of6,.g-b--pull--d4of12{margin-right:33.333%}.g-b--pull--d2of3,.g-b--pull--d4of6,.g-b--pull--d8of12{margin-right:66.666%}.g-b--pull--d1of4,.g-b--pull--d2of8,.g-b--pull--d3of12{margin-right:25%}.g-b--pull--d3of4,.g-b--pull--d6of8,.g-b--pull--d9of12{margin-right:75%}.g-b--pull--d1of5,.g-b--pull--d2of10{margin-right:20%}.g-b--pull--d2of5,.g-b--pull--d4of10{margin-right:40%}.g-b--pull--d3of5,.g-b--pull--d6of10{margin-right:60%}.g-b--pull--d4of5,.g-b--pull--d8of10{margin-right:80%}.g-b--pull--d1of6,.g-b--pull--d2of12{margin-right:16.666%}.g-b--pull--d5of6,.g-b--pull--d10of12{margin-right:83.333%}.g-b--pull--d1of8{margin-right:12.5%}.g-b--pull--d3of8{margin-right:37.5%}.g-b--pull--d5of8{margin-right:62.5%}.g-b--pull--d7of8{margin-right:87.5%}.g-b--pull--d1of10{margin-right:10%}.g-b--pull--d3of10{margin-right:30%}.g-b--pull--d7of10{margin-right:70%}.g-b--pull--d9of10{margin-right:90%}.g-b--pull--d1of12{margin-right:8.333%}.g-b--pull--d5of12{margin-right:41.666%}.g-b--pull--d7of12{margin-right:58.333%}.g-b--pull--d11of12{margin-right:91.666%}.splashscreen-dillinger{width:700px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{font-size:1.25rem;margin-bottom:.89999rem;padding-top:.10001rem}.menu .menu-item--export-as{display:block}.menu .menu-item--preview{display:none}.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#zen{width:700px}#editor{font-size:1rem}}@media screen and (min-width:87.5em){html{font-size:.875em}body{font-size:1rem}ul,ol{margin-bottom:.83999rem;padding-top:.16001rem}p{padding-top:.66001rem}p,pre{margin-bottom:1.33999rem}pre,blockquote p{font-size:1rem;padding-top:.66001rem}blockquote p{margin-bottom:.33999rem}h1{font-size:2.0571429rem;margin-bottom:.21999rem;padding-top:.78001rem}h2{font-size:1.953125rem;margin-bottom:.1835837rem;padding-top:.8164163rem}h3{font-size:1.6457143rem;margin-bottom:.07599rem;padding-top:.92401rem}h4{font-size:1.5625rem;margin-bottom:.546865rem;padding-top:.453135rem}h5{font-size:1.25rem;margin-bottom:-.56251rem;padding-top:.56251rem}h6{font-size:1rem;margin-bottom:-.65001rem;padding-top:.65001rem}.splashscreen-dillinger{width:800px}.splashscreen p{font-size:1.25rem;margin-bottom:1.43749rem;padding-top:.56251rem}.title{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.title-document{margin-bottom:.89999rem;padding-top:.10001rem}.title-document,.settings a{font-size:1.25rem}.words,.characters{font-size:.8rem;margin-bottom:.77999rem;padding-top:.22001rem}.modal--dillinger.about .modal-dialog,#zen{font-size:1.25rem}#editor{font-size:1rem}}@media (min-width:768px){.form-inline .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.form-inline .form-control{display:inline-block;width:auto;vertical-align:middle}.form-inline .input-group{display:inline-table;vertical-align:middle}.form-inline .input-group .input-group-addon,.form-inline .input-group .input-group-btn,.form-inline .input-group .form-control{width:auto}.form-inline .input-group>.form-control{width:100%}.form-inline .control-label{margin-bottom:0;vertical-align:middle}.form-inline .radio,.form-inline .checkbox{display:inline-block;margin-top:0;margin-bottom:0;vertical-align:middle}.form-inline .radio label,.form-inline .checkbox label{padding-left:0}.form-inline .radio input[type="radio"],.form-inline .checkbox input[type="checkbox"]{position:relative;margin-left:0}.form-inline .has-feedback .form-control-feedback{top:0}.form-horizontal .control-label{text-align:right;margin-bottom:0;padding-top:7px}.form-horizontal .form-group-lg .control-label{padding-top:14.3px}.form-horizontal .form-group-sm .control-label{padding-top:6px}.modal-dialog{width:600px;margin:30px auto}.modal-content{box-shadow:0 5px 15px rgba(0,0,0,.5)}.modal-sm{width:300px}}@media (min-width:992px){.modal-lg{width:900px}}@media screen and (max-width:1200px){#_default_{max-width:30%}#_default_ ._default_{font-size:.825rem;line-height:.875rem;padding:12px 12px 6px 24px;text-align:justify}}@media screen and (max-width:1100px){#_default_{max-width:27%}#_default_ ._default_{font-size:.8rem;line-height:.85rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:1000px){#_default_{max-width:24%}#_default_ ._default_{font-size:.775rem;line-height:.8rem;padding:12px 6px 6px 24px;text-align:justify}}@media screen and (max-width:900px){#_default_{max-width:30%}}@media screen and (max-width:767px){.table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;overflow-x:auto;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd;-webkit-overflow-scrolling:touch}.table-responsive>.table{margin-bottom:0}.table-responsive>.table>thead>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>tfoot>tr>td{white-space:nowrap}.table-responsive>.table-bordered{border:0}.table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0}.table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0}.table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>td{border-bottom:0}}@media screen and (max-width:720px){#_default_{max-width:60%}#_default_ ._default_{font-size:.75rem;line-height:1rem;padding:12px 24px}}@media screen and (max-width:620px){#_default_{max-width:50%}#_default_ ._default_{font-size:.66rem;letter-spacing:1px;line-height:1rem;padding:10px 24px}}@media screen and (max-width:520px){#_default_ ._default_{font-size:.4rem;line-height:.875rem;padding:6px 12px 6px 24px;text-align:justify}}@media screen and (max-width:460px){#_default_{display:none}}@media screen and (max-width:46.1875em){.editor-header{display:none}.editor-header--first{display:block;width:100%}}</style></head><body id="preview">
+<h2 class="code-line" data-line-start=0 data-line-end=2 ><a id="Create_new_project_0"></a>Create new project</h2>
+<p class="has-line-data" data-line-start="3" data-line-end="5">In Android Studio, create a new project targeting API level 24 (Android<br>
+7.) or later:</p>
+<p class="has-line-data" data-line-start="6" data-line-end="7"><strong>Phone and Tablet API 24 7.0 (Nougat)</strong></p>
+<p class="has-line-data" data-line-start="8" data-line-end="9"><img src="https://codelabs.developers.google.com/codelabs/sceneform-intro/img/d00e07b5c23af09b.png" alt=""></p>
+<p class="has-line-data" data-line-start="10" data-line-end="12"><strong>Basic Activity</strong> - with the floating action button. We’ll use this<br>
+button to take a photo.</p>
+<p class="has-line-data" data-line-start="13" data-line-end="14"><img src="https://codelabs.developers.google.com/codelabs/sceneform-intro/img/362ec2b1cecbd4c7.png" alt=""></p>
+<p class="has-line-data" data-line-start="15" data-line-end="16">Use the default name “MainActivity” for the activity.</p>
+<h2 class="code-line" data-line-start=17 data-line-end=19 ><a id="Update_Gradle_scripts_17"></a>Update Gradle scripts</h2>
+<p class="has-line-data" data-line-start="20" data-line-end="22">In the gradle script we need to enable Java 8 and add the dependencies<br>
+for Sceneform.</p>
+<h2 class="code-line" data-line-start=23 data-line-end=25 ><a id="Enable_Java_8_23"></a>Enable Java 8</h2>
+<p class="has-line-data" data-line-start="26" data-line-end="28">Sceneform uses language constructs from Java 8. For projects that have a<br>
+min API level less than 26, you need to explicitly add support for Java</p>
+<ol start="8">
+<li class="has-line-data" data-line-start="28" data-line-end="30"></li>
+</ol>
+<p class="has-line-data" data-line-start="30" data-line-end="31">In the <strong><code>android {}</code></strong> section of <strong>app/build.gradle</strong> add:</p>
+<pre><code>compileOptions {
+   sourceCompatibility JavaVersion.VERSION_1_8
+   targetCompatibility JavaVersion.VERSION_1_8
+}
+</code></pre>
+<h2 class="code-line" data-line-start=37 data-line-end=39 ><a id="Add_the_ARCore_and_Sceneform_dependencies_37"></a>Add the ARCore and Sceneform dependencies</h2>
+<p class="has-line-data" data-line-start="40" data-line-end="42">In the <strong>app/build.gradle</strong> file add dependencies for the Sceneform API<br>
+and the Sceneform UX elements.</p>
+<p class="has-line-data" data-line-start="43" data-line-end="44">In the <strong><code>dependency {}</code></strong> section add:</p>
+<pre><code>implementation &quot;com.google.ar.sceneform.ux:sceneform-ux:1.8.0&quot;
+implementation 'com.google.ar.sceneform:assets:1.8.0'
+</code></pre>
+<p class="has-line-data" data-line-start="48" data-line-end="49">Press the “Sync now” link to update the project.</p>
+<p class="has-line-data" data-line-start="50" data-line-end="52">That does it for the project setup. Now let’s add the Sceneform<br>
+ArFragment to the view layout.</p>
+<h1 class="code-line" data-line-start=53 data-line-end=55 ><a id="Add_the_Sceneform_ArFragment_53"></a>Add the Sceneform ArFragment</h1>
+<p class="has-line-data" data-line-start="56" data-line-end="62">There are several aspects of making a great AR experience that involve<br>
+interacting with multiple views. This includes things such as displaying<br>
+a graphical indicator that the user should move the phone in order for<br>
+ARCore to detect planes and handling gestures for moving and scaling<br>
+objects. To do this, you’ll add <strong>ArFragment</strong> to the<br>
+<strong><code>app/res/layout/content_main.xml</code></strong> file.</p>
+<p class="has-line-data" data-line-start="63" data-line-end="66">Open content_main.xml and let’s add the fragment and the view. Here’s<br>
+the text of the layout file, but feel free to use the graphical view if<br>
+that is more comfortable for you.</p>
+<p class="has-line-data" data-line-start="67" data-line-end="68">Replace the existing <code>TextView</code> element with the fragment:</p>
+<pre><code>    &lt;fragment
+   android:id=&quot;@+id/sceneform_fragment&quot;
+   android:name=&quot;com.google.ar.sceneform.ux.ArFragment&quot;
+   android:layout_width=&quot;match_parent&quot;
+   android:layout_height=&quot;match_parent&quot; /&gt;
+</code></pre>
+<h2 class="code-line" data-line-start=75 data-line-end=77 ><a id="Add_ARCore_AndroidManifest_entries_75"></a>Add ARCore AndroidManifest entries</h2>
+<p class="has-line-data" data-line-start="78" data-line-end="84">ARCore requires specific entries in the AndroidManifest. These declare<br>
+that the camera will be used by the application, and that the AR<br>
+features are used along with designating the application as requiring<br>
+ARCore to run. This last metadata entry is used by the Play Store to<br>
+filter out applications for users on devices that are not supported by<br>
+ARCore.</p>
+<p class="has-line-data" data-line-start="85" data-line-end="87">Open <strong><code>app/manifests/AndroidManifest.xml</code></strong> and in the <strong><code>&lt;manifest&gt;</code></strong><br>
+section add these elements:</p>
+<pre><code>&lt;uses-permission android:name=&quot;android.permission.CAMERA&quot; /&gt;
+&lt;uses-feature android:name=&quot;android.hardware.camera.ar&quot; android:required=&quot;true&quot; /&gt;
+</code></pre>
+<p class="has-line-data" data-line-start="91" data-line-end="92">Then add the metadata in the <strong><code>&lt;application&gt;</code></strong> section:</p>
+<pre><code>&lt;meta-data android:name=&quot;com.google.ar.core&quot; android:value=&quot;required&quot; /&gt;
+</code></pre>
+<h2 class="code-line" data-line-start=95 data-line-end=97 ><a id="Add_the_ArFragment_field_95"></a>Add the ArFragment field</h2>
+<p class="has-line-data" data-line-start="98" data-line-end="101">We’ll be referencing the fragment a lot as we work with our AR scene. To<br>
+make things easier, open <strong><code>MainActivity.kt</code></strong> and add a member variable<br>
+at the top of the class:</p>
+<pre><code>private var fragment: ArFragment? = null
+</code></pre>
+<p class="has-line-data" data-line-start="104" data-line-end="105"><strong>Remember to Import classes!</strong></p>
+<ul>
+<li class="has-line-data" data-line-start="106" data-line-end="108">Remember that all classes not in the current class’s package need to<br>
+be imported!</li>
+<li class="has-line-data" data-line-start="108" data-line-end="111">In Android Studio you can do this by pressing ⌥-return on a Mac, or<br>
+Alt + Enter on Windows.</li>
+</ul>
+<p class="has-line-data" data-line-start="111" data-line-end="114">Initialize it at the bottom of the <strong><code>onCreate()</code></strong> method. Since we’re<br>
+using a fragment, we need to use the fragment manager to find the<br>
+fragment:</p>
+<pre><code>fragment =  supportFragmentManager.findFragmentById(R.id.sceneform_fragment) as ArFragment
+</code></pre>
+<p class="has-line-data" data-line-start="117" data-line-end="119">Great! Now we have the minimum amount of code to start using ARCore and<br>
+make sure it works. Next, let’s try it out!</p>
+<h2 class="code-line" data-line-start=120 data-line-end=122 ><a id="Add_a_pointer_120"></a>Add a pointer</h2>
+<p class="has-line-data" data-line-start="123" data-line-end="129">This application presents a set of models that can be placed on the AR<br>
+scene. We could use drag and drop to select one of the models and drag<br>
+it onto the view. However, what seems to work best is to just <em>look</em> at<br>
+where you want to place the model and tap it. This keeps your fingers<br>
+out of the way so you can see better, and also makes it less cumbersome<br>
+to hold the phone in the right place as dragging.</p>
+<p class="has-line-data" data-line-start="130" data-line-end="133">To do this, we’ll add a pointer in the form of an overlay. The overlay<br>
+will always be centered on the screen, and when we take a picture of the<br>
+scene later, the pointer will not be in the image.</p>
+<p class="has-line-data" data-line-start="134" data-line-end="138">The View overlay needs a <em>Drawable</em><strong><em>,</em></strong> so click Menu<br>
+<strong>File&gt;New&gt;Java Class</strong> to make a new class named<br>
+<strong><code>PointerDrawable.</code></strong> This extends <strong><code>Drawable</code></strong>, let’s set the<br>
+Superclass to <strong><code>android.graphics.drawable.Drawable</code></strong></p>
+<p class="has-line-data" data-line-start="139" data-line-end="141">Click on the red “light bulb” in the editor and select “Implement<br>
+Methods”. This will generate the placeholder methods.</p>
+<p class="has-line-data" data-line-start="142" data-line-end="144">Our pointer will have 2 states, enabled, which means an object can be<br>
+dropped on the scene at that location, and disabled, when it can’t.</p>
+<p class="has-line-data" data-line-start="145" data-line-end="146">We need 2 member variables:</p>
+<ul>
+<li class="has-line-data" data-line-start="147" data-line-end="148">Paint object for drawing.</li>
+<li class="has-line-data" data-line-start="148" data-line-end="150">Boolean flag for indicating enabled or disabled.</li>
+</ul>
+<p class="has-line-data" data-line-start="150" data-line-end="151">Add these fields at the top of the class.</p>
+<pre><code>private var paint = Paint()  
+private var enabled: Boolean = false
+</code></pre>
+<p class="has-line-data" data-line-start="155" data-line-end="156">Add a getter and setter for enabled</p>
+<pre><code>fun isEnabled(): Boolean {  
+    return enabled  
+}  
+  
+fun setEnabled(enabled: Boolean) {  
+    this.enabled = enabled  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="165" data-line-end="167">Now implement the <code>draw</code> method. We’ll draw a circle in green when<br>
+enabled, and an X in gray when disabled.</p>
+<pre><code>override fun draw(canvas: Canvas) {  
+    val cx = (canvas.width / 2).toFloat()  
+    val cy = (canvas.height / 2).toFloat()  
+    if (enabled) {  
+        paint.color = Color.GREEN  
+  canvas.drawCircle(cx, cy, 10f, paint)  
+    } else {  
+        paint.color = Color.GRAY  
+  canvas.drawText(&quot;X&quot;, cx, cy, paint)  
+    }  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="180" data-line-end="182">That’s sufficient for our purposes, we can ignore implementing the other<br>
+methods.</p>
+<h2 class="code-line" data-line-start=183 data-line-end=185 ><a id="Control_the_pointer_183"></a>Control the pointer</h2>
+<p class="has-line-data" data-line-start="186" data-line-end="189">Go back to <strong><code>MainActivity.kt</code></strong> and let’s initialize the pointer and<br>
+add the code to enable and disable it based on the tracking state from<br>
+ARCore, and if the user is looking at a plane detected by ARCore.</p>
+<p class="has-line-data" data-line-start="190" data-line-end="191">Add 3 member variables to <strong>MainActivity</strong>:</p>
+<ul>
+<li class="has-line-data" data-line-start="192" data-line-end="193"><code>PointerDrawable pointer</code></li>
+<li class="has-line-data" data-line-start="193" data-line-end="194"><code>boolean isTracking</code> - indicating if ARCore is in tracking state.</li>
+<li class="has-line-data" data-line-start="194" data-line-end="198"><code>boolean isHitting</code> - indicating the user is looking at a plane. The<br>
+method for figuring this out is called <em>hitTest</em> which is why it is<br>
+called isHitting.</li>
+</ul>
+<p class="has-line-data" data-line-start="198" data-line-end="199">&lt;!-- --&gt;</p>
+<pre><code>private var pointer = PointerDrawable()  
+private var isTracking: Boolean = false  
+private var isHitting: Boolean = false
+</code></pre>
+<p class="has-line-data" data-line-start="204" data-line-end="208">At the bottom of <strong><code>onCreate()</code></strong> add a listener to the ArSceneView<br>
+scene which will get called before processing every frame. In this<br>
+listener we can make ARCore API calls and update the status of the<br>
+pointer.</p>
+<p class="has-line-data" data-line-start="209" data-line-end="211">We’ll use a lambda to first call the fragment’s <code>onUpdate</code> method, then<br>
+we’ll call a new method in MainActivity called onUpdate.</p>
+<pre><code>fragment!!.arSceneView.scene.addOnUpdateListener { frameTime -&gt;  fragment!!.onUpdate(frameTime)}
+</code></pre>
+<h2 class="code-line" data-line-start=214 data-line-end=216 ><a id="Implement_onUpdate_214"></a>Implement <strong><code>onUpdate()</code></strong>.</h2>
+<p class="has-line-data" data-line-start="217" data-line-end="219">First, update the tracking state. If ARCore is not tracking, remove the<br>
+pointer until tracking is restored.</p>
+<p class="has-line-data" data-line-start="220" data-line-end="222">Next, if ARCore is tracking, check for the gaze of the user hitting a<br>
+plane detected by ARCore and enable the pointer accordingly.</p>
+<pre><code>private fun onUpdate() {  
+    var trackingChanged = updateTracking()  
+    var contentView = findViewById&lt;View&gt;(android.R.id.content)  
+    if (trackingChanged) {  
+        if (isTracking) {  
+            contentView.overlay.add(pointer)  
+        } else {  
+            contentView.overlay.remove(pointer)  
+        }  
+        contentView.invalidate()  
+    }  
+    if (isTracking)  
+    {  
+        var hitTestChanged = updateHitTest()  
+        if (hitTestChanged)  
+        {  
+            pointer.setEnabled(isHitting)  
+            contentView.invalidate()  
+        }  
+    }  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="245" data-line-end="247"><strong><code>updateTracking()</code></strong> uses ARCore’s camera state and returns true if<br>
+the tracking state has changed since last call.</p>
+<pre><code>private fun updateTracking(): Boolean {  
+    val frame = fragment?.getArSceneView()?.arFrame  
+  val wasTracking = isTracking  
+ isTracking = frame != null &amp;&amp; frame.camera.trackingState === TrackingState.TRACKING  
+  return isTracking != wasTracking  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="255" data-line-end="259"><strong><code>updateHitTest()</code></strong> also uses ARCore to call <code>Frame.hitTest()</code>. As<br>
+soon as any hit is detected, the method returns. We also need the center<br>
+of the screen for this method, so add a helper method<br>
+<strong><code>getScreenCenter()</code></strong> as well.</p>
+<pre><code>private fun updateHitTest(): Boolean {  
+    val frame = fragment?.arSceneView?.arFrame  
+  var pt = getScreenCenter()  
+    var hits: List&lt;HitResult&gt;  
+    var wasHitting = isHitting  
+ isHitting = false  
+ if (frame != null) {  
+        hits = frame.hitTest(pt.x.toFloat(), pt.y.toFloat())  
+        for (hit in hits) {  
+            val trackable = hit.trackable  
+  if (trackable is Plane &amp;&amp; (trackable as Plane).isPoseInPolygon(hit.hitPose)) {  
+                isHitting = true  
+ break  }  
+        }  
+    }  
+    return wasHitting != isHitting  
+}
+
+private fun getScreenCenter(): android.graphics.Point {  
+    var vw = findViewById&lt;View&gt;(android.R.id.content)    
+    return android.graphics.Point(vw.width / 2, vw.height / 2)  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="283" data-line-end="285">Great! Now we have the pointer implemented, let’s try it out and make<br>
+sure it works.</p>
+<h2 class="code-line" data-line-start=286 data-line-end=288 ><a id="Add_the_Sceneform_plugin_for_Android_Studio_286"></a>Add the Sceneform plugin for Android Studio</h2>
+<p class="has-line-data" data-line-start="289" data-line-end="292">Sceneform has an Android Studio plugin which assists in importing 3D<br>
+models, adding them to the gradle file, and providing a preview of the<br>
+model.</p>
+<p class="has-line-data" data-line-start="293" data-line-end="298">You can install this by selecting <strong>File-&gt;Settings</strong> or <strong>Preferences</strong><br>
+from Android Studio, then the <strong>Plugins</strong> section and &quot;<strong>Browse<br>
+Repositories…</strong>&quot; for <strong>“Google Sceneform Tools (Beta)”</strong>. If the<br>
+plugin doesn’t appear, double check the version of Android Studio.<br>
+Google Sceneform Tools requires Android Studio 3.1 or later version</p>
+<p class="has-line-data" data-line-start="299" data-line-end="300"><img src="https://codelabs.developers.google.com/codelabs/sceneform-intro/img/af01770db1ae6ca2.png" alt=""></p>
+<p class="has-line-data" data-line-start="301" data-line-end="302">Now, let’s use the plugin to import some models!</p>
+<h2 class="code-line" data-line-start=303 data-line-end=305 ><a id="Add_sample_3D_models_to_the_project_303"></a>Add sample 3D models to the project</h2>
+<p class="has-line-data" data-line-start="306" data-line-end="312">Android Studio 3.1 supports a new folder type named &quot;<strong>sampledata</strong>&quot;.<br>
+This folder is used for design time sample data. For our purposes, we’ll<br>
+keep the source 3D assets in this directory. Files in sampledata are not<br>
+added to the APK, but available in the editor. To make sceneform<br>
+compatible models, we’ll add the conversion tasks to gradle and add them<br>
+to the assets directory so they are available at runtime.</p>
+<p class="has-line-data" data-line-start="313" data-line-end="316">Create the sample data directory by clicking on <strong><code>app</code></strong> in the project<br>
+view and then right mouse click to find the menu item <strong>New &gt; Sample<br>
+Data Directory.</strong></p>
+<p class="has-line-data" data-line-start="317" data-line-end="320">Download the<br>
+<a href="https://github.com/googlecodelabs/sceneform-intro/raw/master/sampledata.zip">sampledata.zip</a><br>
+resources from GitHub. This contains 2 directories:</p>
+<ul>
+<li class="has-line-data" data-line-start="321" data-line-end="322"><strong><code>models</code></strong> - copy this to <strong><code>app/sampledata</code></strong></li>
+<li class="has-line-data" data-line-start="322" data-line-end="325"><strong><code>Thumbnails</code></strong> <code>-</code> copy the files to<br>
+<strong><code>app/src/main/res/drawable</code></strong></li>
+</ul>
+<h2 class="code-line" data-line-start=325 data-line-end=327 ><a id="Import_the_models_325"></a>Import the models</h2>
+<p class="has-line-data" data-line-start="328" data-line-end="333">There are 4 models to use for the codelab to build a “table-top” scaled<br>
+scene, as opposed to a “room-scale” scene). These models should now be<br>
+in <strong><code>app/sampledata/models</code></strong> (if they are not, go back one step, and<br>
+copy the models). The models have multiple files associated with one<br>
+object. The main model files are:</p>
+<ul>
+<li class="has-line-data" data-line-start="334" data-line-end="335">andy_dance.fbx - Our friendly Android.</li>
+<li class="has-line-data" data-line-start="335" data-line-end="336">Cabin.obj - A model of a log cabin.</li>
+<li class="has-line-data" data-line-start="336" data-line-end="337">House.obj - A model of a house.</li>
+<li class="has-line-data" data-line-start="337" data-line-end="339">Igloo.obj - A model of an igloo.</li>
+</ul>
+<p class="has-line-data" data-line-start="339" data-line-end="342">All these models are authored by Google and covered by the CC-BY<br>
+license. You can find them and lots of other models at the <a href="https://poly.google.com/">Poly<br>
+website</a>.</p>
+<p class="has-line-data" data-line-start="343" data-line-end="345">We’ll use the Sceneform plugin to add the conversion tasks to the<br>
+build.gradle file and preview the models.</p>
+<p class="has-line-data" data-line-start="346" data-line-end="349">Select <strong>app/sampledata/models/andy_dance.fbx</strong> and then right mouse<br>
+click to get the menu and pick <strong>New &gt; Sceneform asset.</strong> This opens<br>
+the import wizard page with everything initialized to reasonable values.</p>
+<p class="has-line-data" data-line-start="350" data-line-end="351"><img src="https://codelabs.developers.google.com/codelabs/sceneform-intro/img/b3e5be44c949ab70.png" alt=""></p>
+<p class="has-line-data" data-line-start="352" data-line-end="354">Hit “+” to add <strong>Animation Files</strong> and select<br>
+<strong>sampledata/models/andy_dance.fbx</strong>.</p>
+<p class="has-line-data" data-line-start="355" data-line-end="356">Press <strong>Finish</strong> to start the importing of the model.</p>
+<p class="has-line-data" data-line-start="357" data-line-end="364">The output of this import process will be a text <strong>‘.sfa’</strong> file which<br>
+will be compiled into a binary <strong>‘.sfb’.</strong> The .sfa file contains a<br>
+json-like specification for the asset and the parameters there may be<br>
+adjusted by hand. The ‘.sfb’ file is the compiled binary resource for<br>
+use in your application. The Sceneform plugin allows the ‘.sfb’ file to<br>
+opened and adjusted in editor, but note that any edits made will be<br>
+saved with the ‘.sfa’ file and synced into the ‘.sfb’ binary asset.</p>
+<p class="has-line-data" data-line-start="365" data-line-end="368">When the import completes, the plugin will open the <strong>‘.sfb’</strong> file in<br>
+the editor. The Sceneform viewer is also opened, showing the imported<br>
+model:</p>
+<p class="has-line-data" data-line-start="369" data-line-end="370"><img src="https://codelabs.developers.google.com/codelabs/sceneform-intro/img/998e2367095275e5.png" alt=""></p>
+<p class="has-line-data" data-line-start="371" data-line-end="373">A common parameter to modify is <strong>‘scale’</strong>. Add a line with <strong>scale:<br>
+0.25,</strong> in the ‘model’ object. When done it should look like this:</p>
+<pre><code>model: {
+ scale: 0.25,
+ attributes: [
+   'Position',
+   'TexCoord',
+   'Orientation',
+   'BoneIndices',
+   'BoneWeights',
+ ],
+ collision: {},
+ file: 'sampledata/models/andy_dance.fbx',
+ name: 'andy_dance',
+ recenter: 'root',
+},
+</code></pre>
+<h2 class="code-line" data-line-start=389 data-line-end=391 ><a id="Convert_Cabinobj_389"></a>Convert Cabin.obj</h2>
+<p class="has-line-data" data-line-start="392" data-line-end="394">Now convert the other models using the same process for<br>
+<strong><code>app/sampledata/models/Cabin.obj</code></strong>.</p>
+<p class="has-line-data" data-line-start="395" data-line-end="399">You might notice that the Cabin model is a lot bigger than the andy<br>
+model. This is a common situation in dealing with 3D models.<br>
+Fortunately, we can adjust the size when converting the model by editing<br>
+the <strong><code>Cabin.sfa</code></strong> file.</p>
+<p class="has-line-data" data-line-start="400" data-line-end="401">Find the line that has <strong><code>scale:</code></strong> and change the value to <strong>0.0005</strong></p>
+<p class="has-line-data" data-line-start="402" data-line-end="403">Save the file and when it rebuilds, the cabin will appear smaller.</p>
+<h2 class="code-line" data-line-start=404 data-line-end=406 ><a id="Convert_Houseobj_404"></a>Convert House.obj</h2>
+<p class="has-line-data" data-line-start="407" data-line-end="409">The model file is <strong><code>app/sampledata/models/House.obj</code></strong>. It does not<br>
+need any adjustments.</p>
+<h2 class="code-line" data-line-start=410 data-line-end=412 ><a id="Convert_iglooobj_410"></a>Convert igloo.obj</h2>
+<p class="has-line-data" data-line-start="413" data-line-end="415">The model file is <strong><code>app/sampledata/models/igloo.obj</code></strong>. It looks a<br>
+little big as well, so scale it to <strong>0.25.</strong></p>
+<p class="has-line-data" data-line-start="416" data-line-end="417">Now we have our 3D assets, let’s add them to the gallery.</p>
+<h2 class="code-line" data-line-start=418 data-line-end=420 ><a id="Add_Gallery_of_models_418"></a>Add Gallery of models</h2>
+<p class="has-line-data" data-line-start="421" data-line-end="424">Now we’ll add a simple list of models we can add to our augmented world.<br>
+RecyclerViews are great for showing a scrolling list of items, that’s a<br>
+topic for another day, We’ll just use a LinearLayout.</p>
+<h2 class="code-line" data-line-start=425 data-line-end=427 ><a id="Add_the_LinearLayout_to_the_layout_file_425"></a>Add the LinearLayout to the layout file</h2>
+<p class="has-line-data" data-line-start="428" data-line-end="430">Open up <strong><code>app/res/layout/content_main.xml</code></strong> and directly below the<br>
+<code>&lt;fragment&gt;</code> element, add the LinearLayout.</p>
+<p class="has-line-data" data-line-start="431" data-line-end="432">Set the attributes of the LinearLayout:</p>
+<ul>
+<li class="has-line-data" data-line-start="433" data-line-end="434"><strong>id:</strong> @+id/gallery_layout</li>
+<li class="has-line-data" data-line-start="434" data-line-end="436"><strong>layout_width</strong>: match_parent <em>(we want to span the width of the<br>
+device)</em></li>
+<li class="has-line-data" data-line-start="436" data-line-end="438"><strong>layout_height</strong>: 0dp <em>(this causes the height to be calculated by<br>
+the constraint layout)</em></li>
+<li class="has-line-data" data-line-start="438" data-line-end="440"><strong>orientation</strong>: horizontal <em>(fill the layout left to right)</em></li>
+</ul>
+<p class="has-line-data" data-line-start="440" data-line-end="441">Add the layout constraints to keep it at the bottom of the screen.</p>
+<ul>
+<li class="has-line-data" data-line-start="442" data-line-end="443"><strong>layout_constraintBottom_toBottomOf</strong>: parent</li>
+<li class="has-line-data" data-line-start="443" data-line-end="444"><strong>layout_constraintTop_toBottomOf</strong>: @+id/sceneform_fragment</li>
+<li class="has-line-data" data-line-start="444" data-line-end="445"><strong>layout_constraintVertical_chainStyle</strong>: spread</li>
+<li class="has-line-data" data-line-start="445" data-line-end="447"><strong>layout_constraintVertical_weight</strong>: 1</li>
+</ul>
+<p class="has-line-data" data-line-start="447" data-line-end="448">&lt;!-- --&gt;</p>
+<pre><code>    &lt;LinearLayout
+        android:id=&quot;@+id/gallery_layout&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;0dp&quot;
+        android:orientation=&quot;horizontal&quot;
+        app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+        app:layout_constraintTop_toBottomOf=&quot;@+id/sceneform_fragment&quot;
+        app:layout_constraintVertical_chainStyle=&quot;spread&quot;
+        app:layout_constraintVertical_weight=&quot;1&quot;/&gt;
+</code></pre>
+<h2 class="code-line" data-line-start=459 data-line-end=461 ><a id="Adjust_the_fragment_layout_459"></a>Adjust the fragment layout</h2>
+<p class="has-line-data" data-line-start="462" data-line-end="464">Change the fragment layout to layout the fragment on the top part of the<br>
+screen:</p>
+<ul>
+<li class="has-line-data" data-line-start="465" data-line-end="467"><strong>layout_height</strong>: 0dp <em>(this causes the height to be calculated by<br>
+the constraint layout)</em></li>
+<li class="has-line-data" data-line-start="467" data-line-end="468"><strong>layout_constraintTop_toTopOf</strong>: parent</li>
+<li class="has-line-data" data-line-start="468" data-line-end="469"><strong>layout_constraintBottom_toTopOf</strong>: @id/gallery_layout</li>
+<li class="has-line-data" data-line-start="469" data-line-end="470"><strong>layout_constraintVertical_chainStyle</strong>: spread</li>
+<li class="has-line-data" data-line-start="470" data-line-end="472"><strong>layout_constraintVertical_weight</strong>: 9</li>
+</ul>
+<p class="has-line-data" data-line-start="472" data-line-end="473">When it is updated, it will look like this:</p>
+<pre><code>    &lt;fragment
+        android:id=&quot;@+id/sceneform_fragment&quot;
+        android:name=&quot;com.google.ar.sceneform.ux.ArFragment&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;0dp&quot;
+        app:layout_constraintTop_toTopOf=&quot;parent&quot; 
+        app:layout_constraintBottom_toTopOf=&quot;@id/gallery_layout&quot;
+        app:layout_constraintVertical_chainStyle=&quot;spread&quot;
+        app:layout_constraintVertical_weight=&quot;9&quot;/&gt;
+</code></pre>
+<h2 class="code-line" data-line-start=484 data-line-end=486 ><a id="Initialize_the_Gallery_of_models_484"></a>Initialize the Gallery of models</h2>
+<p class="has-line-data" data-line-start="487" data-line-end="490">Now we’ll build the gallery. Each item in the gallery has a name, a uri<br>
+to the sfb model in the assets directory, and a resource id of the<br>
+thumbnail image of the model.</p>
+<p class="has-line-data" data-line-start="491" data-line-end="493">In <strong><code>MainActivity.kt</code></strong> add a method at the end of the class named<br>
+<strong><code>initializeGallery().</code></strong></p>
+<p class="has-line-data" data-line-start="494" data-line-end="496">In there, first get the gallery layout view, then create the items, and<br>
+add them to the gallery.</p>
+<p class="has-line-data" data-line-start="497" data-line-end="499">For each item, create an ImageView for the thumbnail, and add an<br>
+onClickListener to handle adding the model to the scene.</p>
+<pre><code>private fun initializeGallery() {  
+    var gallery = findViewById&lt;LinearLayout&gt;(R.id.gallery_layout)  
+  
+    val andy = ImageView(this)  
+    andy.setImageResource(R.drawable.droid_thumb)  
+    andy.setContentDescription(&quot;andy&quot;)  
+    andy.setOnClickListener({ view -&gt; addObject(Uri.parse(&quot;andy_dance.sfb&quot;)) })  
+    gallery.addView(andy)  
+  
+    val cabin = ImageView(this)  
+    cabin.setImageResource(R.drawable.cabin_thumb)  
+    cabin.setContentDescription(&quot;cabin&quot;)  
+    cabin.setOnClickListener({ view -&gt; addObject(Uri.parse(&quot;Cabin.sfb&quot;)) })  
+    gallery.addView(cabin)  
+  
+    val house = ImageView(this)  
+    house.setImageResource(R.drawable.house_thumb)  
+    house.setContentDescription(&quot;house&quot;)  
+    house.setOnClickListener({ view -&gt; addObject(Uri.parse(&quot;House.sfb&quot;)) })  
+    gallery.addView(house)  
+  
+    val igloo = ImageView(this)  
+    igloo.setImageResource(R.drawable.igloo_thumb)  
+    igloo.setContentDescription(&quot;igloo&quot;)  
+    igloo.setOnClickListener({ view -&gt; addObject(Uri.parse(&quot;igloo.sfb&quot;)) })  
+    gallery.addView(igloo)  
+}
+</code></pre>
+<h2 class="code-line" data-line-start=528 data-line-end=530 ><a id="Add_the_addObject_method_528"></a>Add the addObject method</h2>
+<p class="has-line-data" data-line-start="531" data-line-end="535">This method is called when one of the items in the gallery is clicked.<br>
+It performs a hittest to determine where in the 3D world space the<br>
+object should be placed, then calls a method <strong><code>placeObject</code></strong> to<br>
+actually place the object.</p>
+<pre><code>private fun addObject(model: Uri) {  
+    val frame = fragment?.getArSceneView()?.arFrame  
+  val pt = getScreenCenter()  
+    val hits: List&lt;HitResult&gt;  
+    if (frame != null) {  
+        hits = frame.hitTest(pt.x.toFloat(), pt.y.toFloat())  
+        for (hit in hits) {  
+            val trackable = hit.trackable  
+  if (trackable is Plane &amp;&amp; trackable.isPoseInPolygon(hit.hitPose)) {  
+                modelLoader?.loadModel(hit.createAnchor(), model)  
+                break  
+  
+  }  
+        }  
+    }  
+}
+</code></pre>
+<h2 class="code-line" data-line-start=553 data-line-end=555 ><a id="Add_a_ModelLoader_class_553"></a>Add a ModelLoader class</h2>
+<p class="has-line-data" data-line-start="556" data-line-end="561">Create a ModelLoader class to start the asynchronous loading of the 3D<br>
+model using the ModelRenderable builder. The activity class can be<br>
+replaced or destroyed at any point, even while a model is loading. A<br>
+weak reference is used to ensure the ModelLoader respects the Activity<br>
+lifecycle.</p>
+<pre><code>import android.net.Uri  
+import android.util.Log  
+import com.google.ar.core.Anchor  
+import com.google.ar.sceneform.rendering.ModelRenderable  
+import com.krunalraj.arcoreplayground.MainActivity  
+import java.lang.ref.WeakReference  
+  
+class ModelLoader internal constructor(owner:WeakReference&lt;MainActivity&gt;) {  
+    private val owner: WeakReference&lt;MainActivity&gt;  
+    init{  
+        this.owner = owner  
+    }  
+    internal fun loadModel(anchor: Anchor, uri: Uri) {  
+        if (owner.get() == null)  
+        {  
+            Log.d(TAG, &quot;Activity is null. Cannot load model.&quot;)  
+            return  
+  }  
+        ModelRenderable.builder()  
+            .setSource(owner.get(), uri)  
+            .build()  
+            .handle({ renderable, throwable-&gt;  
+  val activity = owner.get()  
+                if (activity == null)  
+                {  
+null  
+  }  
+                else if (throwable != null)  
+                {  
+                    activity.onException(throwable)  
+                }  
+                else  
+  {  
+                    activity.addNodeToScene(anchor, renderable)  
+                }  
+                null })  
+        return  
+  }  
+    companion object {  
+        private val TAG = &quot;ModelLoader&quot;  
+  }  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="605" data-line-end="606">Additionally in the MainActivity add an instance of the ModelLoader</p>
+<pre><code> private var modelLoader: ModelLoader? = null
+</code></pre>
+<p class="has-line-data" data-line-start="609" data-line-end="610">In onCreate initialize the modelLoader:</p>
+<pre><code>modelLoader = ModelLoader(WeakReference(this))
+</code></pre>
+<h2 class="code-line" data-line-start=613 data-line-end=615 ><a id="Add_addNodeToScene_613"></a>Add addNodeToScene</h2>
+<p class="has-line-data" data-line-start="616" data-line-end="618">addNodeToScene() builds two nodes and attaches them to the ArSceneView’s<br>
+scene object.</p>
+<p class="has-line-data" data-line-start="619" data-line-end="622">The first node is of type <strong>AnchorNode</strong>. Anchor nodes are positioned<br>
+based on the pose of an ARCore Anchor. As a result, they stay positioned<br>
+in the sample place relative to the real world.</p>
+<p class="has-line-data" data-line-start="623" data-line-end="627">The second Node is a <strong>TransformableNode</strong>. We could use the base class<br>
+type, <strong>Node</strong> for the placing the objects, but Node does not have the<br>
+interaction functionality to handle moving, scaling and rotating based<br>
+on user gestures.</p>
+<p class="has-line-data" data-line-start="628" data-line-end="631">Once the nodes are created and connected to each other, connect the<br>
+AnchorNode to the Scene, and select the node so it has the focus for<br>
+interactions.</p>
+<pre><code>fun addNodeToScene(anchor: Anchor, renderable: ModelRenderable) {  
+    val anchorNode = AnchorNode(anchor)  
+    val node = TransformableNode(fragment?.getTransformationSystem())  
+    node.renderable = renderable  
+    node.setParent(anchorNode)  
+    fragment?.getArSceneView()?.scene?.addChild(anchorNode)  
+    node.select()  
+}
+</code></pre>
+<h2 class="code-line" data-line-start=641 data-line-end=643 ><a id="Add_onException_641"></a>Add onException</h2>
+<p class="has-line-data" data-line-start="644" data-line-end="645">when the network is down, loading a model remotely will fail.</p>
+<pre><code>fun onException(throwable: Throwable) {  
+    val builder = AlertDialog.Builder(this)  
+    builder.setMessage(throwable.message)  
+        .setTitle(&quot;Codelab error!&quot;)  
+    val dialog = builder.create()  
+    dialog.show()  
+    return  
+}
+</code></pre>
+<p class="has-line-data" data-line-start="655" data-line-end="657">Great work!! Now we just need to call initializeGallery from<br>
+<strong><code>onCreate()</code></strong>, at the end of the method:</p>
+<pre><code>   initializeGallery()
+</code></pre>
+<h1 class="code-line" data-line-start=660 data-line-end=662 ><a id="Runtime_Model_Fetching_660"></a>Runtime Model Fetching</h1>
+<p class="has-line-data" data-line-start="663" data-line-end="666">The release of Sceneform (v1.5) introduces the ability to load models at<br>
+runtime, this solves the problem of shipping large APKs with the models<br>
+bundled at compile time.</p>
+<h2 class="code-line" data-line-start=667 data-line-end=669 ><a id="Adding_new_assets_library_667"></a>Adding new assets library</h2>
+<p class="has-line-data" data-line-start="670" data-line-end="673">Update your app’s build.gradle to include new assets library. We will be<br>
+using latest 1.8 version of the same<br>
+<code>implementation 'com.google.ar.sceneform:assets:1.8.0'</code></p>
+<h2 class="code-line" data-line-start=674 data-line-end=676 ><a id="Add_new_model_to_our_gallery_view_but_this_time_instead_of_using_local_uri_we_will_be_using_remote_uri_to_access_the_model_674"></a>Add new model to our gallery view but this time instead of using local uri we will be using remote uri to access the model</h2>
+<p class="has-line-data" data-line-start="677" data-line-end="678"><code>val cat = ImageView(this) cat.setImageResource(R.drawable.cat_thumb) cat.setContentDescription(&quot;cat&quot;) cat.setOnClickListener({ view -&gt; addObjectRemote(Uri.parse(&quot;https://raw.githubusercontent.com/kgediya/ArCore-Sceneform-Kotlin/master/resources/Mesh_Cat.gltf&quot;)) }) gallery.addView(cat)</code></p>
+<h2 class="code-line" data-line-start=679 data-line-end=681 ><a id="Add_new_addObjectRemote_function_679"></a>Add new addObjectRemote function</h2>
+<p class="has-line-data" data-line-start="682" data-line-end="689">``` private fun addObjectRemote(model: Uri) { val frame =<br>
+fragment?.arSceneView?.arFrame val pt = getScreenCenter() val hits:<br>
+List&lt;HitResult&gt; if (frame != null) { hits =<br>
+frame.hitTest(pt.x.toFloat(), pt.y.toFloat()) for (hit in hits) { val<br>
+trackable = hit.trackable if (trackable is Plane &amp;&amp;<br>
+trackable.isPoseInPolygon(hit.hitPose)) {<br>
+placeObject(fragment,hit.createAnchor(), model) break</p>
+<pre><code>            }
+        }
+    }
+}
+
+
+## Finally add placeObject function 
+</code></pre>
+<p class="has-line-data" data-line-start="698" data-line-end="705">private fun placeObject(fragment: ArFragment?, anchor: Anchor, model:<br>
+Uri) { ModelRenderable.builder() .setSource( fragment?.context,<br>
+RenderableSource.builder().setSource( fragment?.context, model,<br>
+RenderableSource.SourceType.GLTF2).build()) .setRegistryId(model)<br>
+.build() .thenAccept { addNodeToScene(anchor, it) } .exceptionally {<br>
+Toast.makeText(this@MainActivity, “Could not fetch model from $model”,<br>
+Toast.LENGTH_SHORT).show() return@exceptionally null } ```</p>
+<h2 class="code-line" data-line-start=706 data-line-end=708 ><a id="Add_Animation_706"></a>Add Animation</h2>
+<h2 class="code-line" data-line-start=709 data-line-end=711 ><a id="Add_the_Sceneform_animation_dependency_709"></a>Add the Sceneform animation dependency</h2>
+<p class="has-line-data" data-line-start="712" data-line-end="714">In the <strong>app/build.gradle</strong> file add optional dependencies for Sceneform<br>
+animation elements.</p>
+<p class="has-line-data" data-line-start="715" data-line-end="716">In the <strong><code>dependency {}</code></strong> section add:</p>
+<pre><code>implementation &quot;com.google.ar.sceneform:animation:1.8.0&quot;
+</code></pre>
+<h2 class="code-line" data-line-start=719 data-line-end=721 ><a id="Start_the_animation_719"></a>Start the animation</h2>
+<p class="has-line-data" data-line-start="722" data-line-end="724">In <strong><code>MainActivity</code></strong> add a method at the end of the class named<br>
+<strong><code>startAnimation().</code></strong></p>
+<pre><code>fun startAnimation(node:TransformableNode, renderable:ModelRenderable) {
+  if (renderable == null || renderable.getAnimationDataCount() === 0)
+  {
+    return
+  }
+  for (i in 0 until renderable.getAnimationDataCount())
+  {
+    val animationData = renderable.getAnimationData(i)
+  }
+  val animator = ModelAnimator(renderable.getAnimationData(0), renderable)
+  animator.start()
+}
+</code></pre>
+<p class="has-line-data" data-line-start="738" data-line-end="739">At the end of addNodeToScene, call the new function</p>
+<pre><code>...
+startAnimation(node, renderable)
+</code></pre>
+<p class="has-line-data" data-line-start="743" data-line-end="745">You can test the application now and see the animation. With the current<br>
+code the animation only plays through once.</p>
+<h2 class="code-line" data-line-start=746 data-line-end=748 ><a id="Set_an_onTapListener_to_pauseresume_the_animation_746"></a>Set an onTapListener to pause/resume the animation</h2>
+<p class="has-line-data" data-line-start="749" data-line-end="750">Next we will make it so that the animation plays and stops when tapped.</p>
+<p class="has-line-data" data-line-start="751" data-line-end="752">Add a function to toggle the state of the animation.</p>
+<pre><code>fun togglePauseAndResume(animator:ModelAnimator) {
+  if (animator.isPaused())
+  {
+    animator.resume()
+  }
+  else if (animator.isStarted())
+  {
+    animator.pause()
+  }
+  else
+  {
+    animator.start()
+  }
+}
+</code></pre>
+<p class="has-line-data" data-line-start="768" data-line-end="770">At the bottom of startAnimation set an onTapListener to call the new<br>
+function</p>
+<pre><code>...
+node.setOnTapListener(
+  { hitTestResult, motionEvent-&gt; togglePauseAndResume(animator) })
+</code></pre>
+<p class="has-line-data" data-line-start="775" data-line-end="776">Now tapping the dancing animation will trigger it to start or stop.</p>
+
+</body></html>

@@ -28,6 +28,7 @@ import com.google.ar.core.Anchor
 import com.google.ar.sceneform.AnchorNode
 
 import androidx.appcompat.app.AlertDialog
+import com.google.ar.sceneform.animation.ModelAnimator
 import com.google.ar.sceneform.assets.RenderableSource
 
 
@@ -50,10 +51,6 @@ class MainActivity : AppCompatActivity() {
 
 
         modelLoader = ModelLoader(WeakReference(this))
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
 
     }
     private fun onUpdate() {
@@ -206,13 +203,42 @@ class MainActivity : AppCompatActivity() {
         node.setParent(anchorNode)
         fragment?.arSceneView?.scene?.addChild(anchorNode)
         node.select()
+     startAnimation(node, renderable)
     }
     fun onException(throwable: Throwable) {
         val builder = AlertDialog.Builder(this)
         builder.setMessage(throwable.message)
-            .setTitle("Codelab error!")
+            .setTitle("Fetch error!")
         val dialog = builder.create()
         dialog.show()
         return
     }
+    fun startAnimation(node:TransformableNode, renderable:ModelRenderable) {
+        if (renderable == null || renderable.getAnimationDataCount() === 0)
+        {
+            return
+        }
+        for (i in 0 until renderable.getAnimationDataCount())
+        {
+            val animationData = renderable.getAnimationData(i)
+        }
+        val animator = ModelAnimator(renderable.getAnimationData(0), renderable)
+        animator.start()
+        node.setOnTapListener { hitTestResult, motionEvent-> togglePauseAndResume(animator) }
+    }
+    fun togglePauseAndResume(animator:ModelAnimator) {
+        if (animator.isPaused())
+        {
+            animator.resume()
+        }
+        else if (animator.isStarted())
+        {
+            animator.pause()
+        }
+        else
+        {
+            animator.start()
+        }
+    }
+
 }
